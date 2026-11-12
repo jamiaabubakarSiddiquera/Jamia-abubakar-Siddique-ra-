@@ -1,197 +1,133 @@
+
 <!DOCTYPE html>
 <html lang="hi">
 <head><meta name="google-site-verification" content="4R2GsQT_4XF3yM8SSV-FQeel8LrCjlvrHx-L4tTeEAw" />
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#064b3b">
-<meta name="description" content="Jamia Abubakar Siddique (RA), Kumra, Mahishi, Saharsa, Bihar. Religious and foundational modern education.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jamia Abubakar Siddique (RA)</title>
 <style>
-:root{--green:#064b3b;--green2:#0b6650;--gold:#d9b66e;--cream:#fbf9f2;--ink:#24352f;--muted:#64736d;--white:#fff}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,"Noto Sans Devanagari","Noto Nastaliq Urdu",sans-serif;line-height:1.7;overflow-x:hidden}
-a{color:inherit}
-.container{width:min(1100px,92%);margin:auto}
-header{background:var(--green);color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 3px 15px #0002}
-.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0;flex-wrap:wrap}
-.brand{font-weight:800;font-size:1.05rem}
-nav{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-nav a{text-decoration:none;font-size:.93rem;color:#fff}
-nav a:hover{color:var(--gold)}
-.langs{display:flex;gap:6px}
-.langs button{border:1px solid #ffffff88;background:transparent;color:#fff;padding:6px 10px;border-radius:20px;cursor:pointer}
-.langs button.active{background:var(--gold);color:#173b30;border-color:var(--gold)}
-.hero{background:linear-gradient(135deg,#064b3b,#0d7055);color:white;padding:72px 0;text-align:center}
-.hero .tag{color:#f0d69c;font-weight:700}
-h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.25;margin:12px 0}
-.hero p{max-width:720px;margin:0 auto 22px;font-size:1.08rem}
-.btn{display:inline-block;background:var(--gold);color:#263a30;text-decoration:none;font-weight:700;padding:11px 20px;border-radius:9px;border:0;cursor:pointer}
-.btn.secondary{background:transparent;border:1px solid #fff;color:#fff;margin-inline-start:8px}
-section{padding:54px 0}
-h2.section-title{text-align:center;color:var(--green);font-size:2rem;margin:0 0 12px}
-.intro{text-align:center;max-width:760px;margin:0 auto 28px;color:var(--muted)}
-.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.card{background:#fff;border-radius:15px;padding:24px;box-shadow:0 8px 24px #174c3512;border:1px solid #e9eee8;min-width:0}
-.card h3{color:var(--green);margin-top:0}
-.quote{background:#edf4ed;border-inline-start:5px solid var(--gold);padding:18px 22px;border-radius:10px;max-width:800px;margin:25px auto 0;text-align:center}
-.admission-wrap{max-width:700px;margin:auto}
-form{display:grid;gap:13px}
-label{font-weight:700;color:var(--green)}
-input,select{width:100%;padding:12px;border:1px solid #cbd7cf;border-radius:8px;font:inherit;background:#fff}
-.consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;color:var(--ink)}
-.consent input{width:auto;margin-top:7px}
-.form-note,.small{font-size:.9rem;color:var(--muted)}
-.news-card{max-width:760px;margin:auto;text-align:center}
-.donate{background:var(--green);color:#fff;border-radius:18px;padding:28px;max-width:760px;margin:auto;text-align:center}
-.donate h2{color:#fff}
-.qr{display:block;width:min(100%,320px);height:auto;margin:20px auto;background:#fff;border-radius:12px;padding:10px}
-.upi{font-weight:700;letter-spacing:.2px}
-.contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.contact-card{background:#fff;border-radius:14px;padding:20px;box-shadow:0 6px 20px #174c3512;overflow-wrap:anywhere}
-footer{background:#06382e;color:#fff;text-align:center;padding:18px 10px;font-size:.92rem}
-@media(max-width:760px){.topbar{justify-content:center}.brand{width:100%;text-align:center}nav{justify-content:center;gap:12px}nav a{font-size:.88rem}.hero{padding:54px 0}.cards,.contact-grid{grid-template-columns:1fr}section{padding:42px 0}.btn.secondary{margin:10px 0 0}}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f8f5;color:#18372b}
+header{background:#075b3b;color:white;text-align:center;padding:28px 15px}
+header h1{margin:0 0 10px}
+nav{background:#06452f;padding:12px;text-align:center}
+nav a{color:white;text-decoration:none;margin:8px;display:inline-block}
+section{background:white;margin:16px auto;padding:22px;border-radius:12px;max-width:850px}
+h2{color:#087346}
+.notice{background:#e2f5e9;padding:14px;border-left:5px solid #087346}
+input,select,button{width:100%;padding:12px;margin:7px 0;border:1px solid #bbb;border-radius:7px;font-size:16px}
+button{background:#087346;color:white;border:0;cursor:pointer}
+footer{background:#06452f;color:white;text-align:center;padding:20px}
+.qr{width:220px;max-width:100%;display:block;margin:15px auto}
 </style>
 </head>
 <body>
+
 <header>
-  <div class="container topbar">
-    <div class="brand" data-i="brand">जामिया अबुबकर सिद्दीक़ (रज़ि.)</div>
-    <nav aria-label="Main navigation">
-      <a href="#about" data-i="navAbout">परिचय</a>
-      <a href="#education" data-i="navEducation">तालीम</a>
-      <a href="#admission" data-i="navAdmission">दाख़िला</a>
-      <a href="#news" data-i="navNews">खबरें</a>
-      <a href="#donate" data-i="navDonate">दान</a>
-      <a href="#contact" data-i="navContact">संपर्क</a>
-    </nav>
-    <div class="langs" aria-label="Choose language">
-      <button type="button" data-lang="hi" class="active">हिन्दी</button>
-      <button type="button" data-lang="ur">اردو</button>
-      <button type="button" data-lang="en">English</button>
-    </div>
-  </div>
+<h1>جامعہ ابوبکر صدیقؓ</h1>
+<h1>Jamia Abubakar Siddique (RA)</h1>
+<p>Ilm • Taleem • Tarbiyat</p>
+<p>Mohtamim: Maulana Mohammad Firoz Alam Qasmi</p>
 </header>
 
-<main>
-<section class="hero">
-  <div class="container">
-    <div class="tag" data-i="tag">इल्म की रोशनी, बेहतर कल की ओर</div>
-    <h1 data-i="title">जामिया अबुबकर सिद्दीक़ (रज़ि.)</h1>
-    <p data-i="heroText">दीनी और बुनियादी आधुनिक शिक्षा के साथ बच्चों की तालीम, तरबियत और अच्छे अख़लाक़ के लिए समर्पित एक संस्थान।</p>
-    <a class="btn" href="#admission" data-i="heroAdmission">दाख़िले की जानकारी</a>
-    <a class="btn secondary" href="#donate" data-i="heroDonate">ऑनलाइन सहयोग करें</a>
-  </div>
+<nav>
+<a href="#home">Home</a>
+<a href="#admission">Admission</a>
+<a href="#calendar">Islamic Date</a>
+<a href="#donation">Donation</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+<h2>Welcome</h2>
+<div class="notice">
+<strong>📢 Admission Open!</strong>
+<p>Jamia Abubakar Siddique (RA) mein admission jaari hai.</p>
+</div>
+<p>Hamare madrase ka maqsad bachchon ko deeni aur zaroori taleem dena hai.</p>
 </section>
 
-<section id="about">
-  <div class="container">
-    <h2 class="section-title" data-i="aboutTitle">हमारा परिचय</h2>
-    <p class="intro" data-i="aboutText">जामिया अबुबकर सिद्दीक़ (रज़ि.) का उद्देश्य विद्यार्थियों को अच्छी शिक्षा, अनुशासन और बेहतर संस्कार देना है।</p>
-    <div class="quote" data-i="quote">“इल्म इंसान को बेहतर बनाता है और अच्छे अख़लाक़ उसकी पहचान हैं।”</div>
-  </div>
-</section>
-
-<section id="education">
-  <div class="container">
-    <h2 class="section-title" data-i="educationTitle">हमारी तालीम</h2>
-    <p class="intro" data-i="educationIntro">दीनी और बुनियादी आधुनिक शिक्षा के ज़रिये बच्चों की क्षमता और आत्मविश्वास बढ़ाना।</p>
-    <div class="cards">
-      <article class="card"><h3 data-i="religiousTitle">दीनी तालीम</h3><p data-i="religiousText">क़ुरआन, बुनियादी इस्लामी शिक्षा और अच्छे अख़लाक़ की तरबियत।</p></article>
-      <article class="card"><h3 data-i="basicTitle">बुनियादी शिक्षा</h3><p data-i="basicText">पढ़ना, लिखना और विद्यार्थियों की बुनियादी शैक्षिक क्षमता को मज़बूत करना।</p></article>
-      <article class="card"><h3 data-i="englishTitle">अंग्रेज़ी शिक्षा</h3><p data-i="englishText">अंग्रेज़ी भाषा सीखने और आत्मविश्वास बढ़ाने के अवसर।</p></article>
-    </div>
-  </div>
+<section id="calendar">
+<h2>🕌 Islamic Calendar</h2>
+<p>Aaj ki Hijri tareekh:</p>
+<h3 id="hijri">Loading...</h3>
+<p id="englishDate"></p>
+<small>Hijri date local chand dekhne ke hisaab se ek din alag ho sakti hai.</small>
 </section>
 
 <section id="admission">
-  <div class="container">
-    <h2 class="section-title" data-i="admissionTitle">दाख़िला / Admission</h2>
-    <p class="intro" data-i="admissionIntro">नीचे जानकारी भरें। WhatsApp खुलेगा और तैयार संदेश आपको खुद भेजना होगा।</p>
-    <div class="card admission-wrap">
-      <form id="admissionForm">
-        <div><label for="student" data-i="studentLabel">विद्यार्थी का नाम</label><input id="student" name="student" required></div>
-        <div><label for="guardian" data-i="guardianLabel">अभिभावक का नाम</label><input id="guardian" name="guardian" required></div>
-        <div><label for="age" data-i="ageLabel">विद्यार्थी की उम्र</label><input id="age" name="age" type="number" min="3" max="40" required></div>
-        <div><label for="course" data-i="courseLabel">किस कक्षा/कोर्स में दाख़िला चाहिए?</label><input id="course" name="course" required></div>
-        <div><label for="phone" data-i="phoneLabel">अभिभावक का मोबाइल नंबर</label><input id="phone" name="phone" type="tel" inputmode="tel" required></div>
-        <label class="consent"><input type="checkbox" id="consent" required><span data-i="consentText">मैं सहमत हूँ कि ये जानकारी दाख़िले के संबंध में मदरसे को WhatsApp पर भेजी जाए।</span></label>
-        <button class="btn" type="submit" data-i="submitLabel">WhatsApp पर आवेदन भेजें</button>
-        <p class="form-note" data-i="formNote">यह फॉर्म जानकारी वेबसाइट पर सेव नहीं करता। WhatsApp खुलेगा; संदेश आपको खुद भेजना होगा।</p>
-      </form>
-    </div>
-  </div>
+<h2>📝 Online Admission Form</h2>
+<p>Form bharne ke baad WhatsApp par admission details bhej sakte hain.</p>
+<form id="admissionForm">
+<input id="student" placeholder="Student Name" required>
+<input id="guardian" placeholder="Father / Guardian Name" required>
+<input id="age" type="number" placeholder="Student Age" required>
+<select id="course" required>
+<option value="">Select Class</option>
+<option>Class 1</option>
+<option>Class 2</option>
+<option>Class 3</option>
+<option>Class 4</option>
+<option>Class 5</option>
+<option>Class 6</option>
+<option>Class 7</option>
+<option>Class 8</option>
+</select>
+<input id="phone" type="tel" placeholder="Parent Mobile Number" required>
+<label><input type="checkbox" id="consent" required style="width:auto"> I agree to send these details to the madrasa on WhatsApp.</label>
+<button type="submit">Submit Admission Form</button>
+</form>
 </section>
 
-<section id="news">
-  <div class="container">
-    <h2 class="section-title" data-i="newsTitle">मदरसे की खबरें</h2>
-    <p class="intro" data-i="newsIntro">मदरसे की घोषणाएँ और कार्यक्रमों की जानकारी यहाँ प्रकाशित की जाएगी।</p>
-    <div class="card news-card"><h3 data-i="newsSoon">नई खबरें जल्द</h3><p data-i="newsPlaceholder">अगली सूचना मिलने पर यहाँ तारीख़ और खबर का विवरण जोड़ा जाएगा।</p></div>
-  </div>
-</section>
-
-<section id="donate">
-  <div class="container">
-    <div class="donate">
-      <h2 data-i="donateTitle">मदरसे के लिए ऑनलाइन सहयोग</h2>
-      <p data-i="donateText">आपका सहयोग मदरसे की तालीमी गतिविधियों और ज़रूरतों में मददगार हो सकता है। अल्लाह आपको इसका बेहतरीन अज्र अता फरमाए।</p>
-      <p><strong data-i="donateContact">दान/सहयोग के लिए संपर्क:</strong> <a href="tel:+919681035071">+91 96810 35071</a></p>
-      <img class="qr" src="phonepe-qr.png" alt="PhonePe QR code for MD Firoz Alam">
-      <p class="upi">UPI ID: 96810350710@ibl</p>
-      <p>Payee: MD FIROZ ALAM</p>
-      <p class="small" style="color:#f5ead1" data-i="qrNote">भुगतान से पहले PhonePe पर प्राप्तकर्ता का नाम MD FIROZ ALAM ज़रूर जाँच लें।</p>
-    </div>
-  </div>
+<section id="donation">
+<h2>❤️ Support Our Madrasa</h2>
+<p>Aap madrase ki taleem aur zarooraton ke liye donation de sakte hain.</p>
+<img src="phonepe-qr.png" alt="Donation QR Code" class="qr">
+<p style="text-align:center">UPI ID: 96810350710@ibl</p>
 </section>
 
 <section id="contact">
-  <div class="container">
-    <h2 class="section-title" data-i="contactTitle">संपर्क करें</h2>
-    <div class="contact-grid">
-      <div class="contact-card"><h3 data-i="headLabel">मोहतमिम</h3><p data-i="headName">मौलाना मोहम्मद फ़िरोज़ आलम क़ासमी</p></div>
-      <div class="contact-card"><h3 data-i="addressLabel">पता</h3><p data-i="address">कुमरा, वार्ड नंबर 3, थाना महिषी, ज़िला सहरसा, बिहार, भारत</p></div>
-      <div class="contact-card"><h3 data-i="mobileLabel">मोबाइल</h3><p><a href="tel:+919681035071">+91 96810 35071</a></p></div>
-    </div>
-  </div>
+<h2>📞 Contact Us</h2>
+<p>Mohtamim: Maulana Mohammad Firoz Alam Qasmi</p>
+<p>Mobile: 9681035071</p>
+<p>Address: Kumra, Ward No. 3, Thana Mahishi, District Saharsa, Bihar, India.</p>
 </section>
-</main>
-<footer><span data-i="footer">© जामिया अबुबकर सिद्दीक़ (रज़ि.) • सभी अधिकार सुरक्षित</span> <span id="year"></span></footer>
+
+<footer>
+<p>© Jamia Abubakar Siddique (RA)</p>
+<p>All Rights Reserved</p>
+</footer>
 
 <script>
-const translations = {
-hi: {
-brand:"जामिया अबुबकर सिद्दीक़ (रज़ि.)",navAbout:"परिचय",navEducation:"तालीम",navAdmission:"दाख़िला",navNews:"खबरें",navDonate:"दान",navContact:"संपर्क",tag:"इल्म की रोशनी, बेहतर कल की ओर",title:"जामिया अबुबकर सिद्दीक़ (रज़ि.)",heroText:"दीनी और बुनियादी आधुनिक शिक्षा के साथ बच्चों की तालीम, तरबियत और अच्छे अख़लाक़ के लिए समर्पित एक संस्थान।",heroAdmission:"दाख़िले की जानकारी",heroDonate:"ऑनलाइन सहयोग करें",aboutTitle:"हमारा परिचय",aboutText:"जामिया अबुबकर सिद्दीक़ (रज़ि.) का उद्देश्य विद्यार्थियों को अच्छी शिक्षा, अनुशासन और बेहतर संस्कार देना है।",quote:"“इल्म इंसान को बेहतर बनाता है और अच्छे अख़लाक़ उसकी पहचान हैं।”",educationTitle:"हमारी तालीम",educationIntro:"दीनी और बुनियादी आधुनिक शिक्षा के ज़रिये बच्चों की क्षमता और आत्मविश्वास बढ़ाना।",religiousTitle:"दीनी तालीम",religiousText:"क़ुरआन, बुनियादी इस्लामी शिक्षा और अच्छे अख़लाक़ की तरबियत।",basicTitle:"बुनियादी शिक्षा",basicText:"पढ़ना, लिखना और विद्यार्थियों की बुनियादी शैक्षिक क्षमता को मज़बूत करना।",englishTitle:"अंग्रेज़ी शिक्षा",englishText:"अंग्रेज़ी भाषा सीखने और आत्मविश्वास बढ़ाने के अवसर।",admissionTitle:"दाख़िला / Admission",admissionIntro:"नीचे जानकारी भरें। WhatsApp खुलेगा और तैयार संदेश आपको खुद भेजना होगा।",studentLabel:"विद्यार्थी का नाम",guardianLabel:"अभिभावक का नाम",ageLabel:"विद्यार्थी की उम्र",courseLabel:"किस कक्षा/कोर्स में दाख़िला चाहिए?",phoneLabel:"अभिभावक का मोबाइल नंबर",consentText:"मैं सहमत हूँ कि ये जानकारी दाख़िले के संबंध में मदरसे को WhatsApp पर भेजी जाए।",submitLabel:"WhatsApp पर आवेदन भेजें",formNote:"यह फॉर्म जानकारी वेबसाइट पर सेव नहीं करता। WhatsApp खुलेगा; संदेश आपको खुद भेजना होगा।",newsTitle:"मदरसे की खबरें",newsIntro:"मदरसे की घोषणाएँ और कार्यक्रमों की जानकारी यहाँ प्रकाशित की जाएगी।",newsSoon:"नई खबरें जल्द",newsPlaceholder:"अगली सूचना मिलने पर यहाँ तारीख़ और खबर का विवरण जोड़ा जाएगा।",donateTitle:"मदरसे के लिए ऑनलाइन सहयोग",donateText:"आपका सहयोग मदरसे की तालीमी गतिविधियों और ज़रूरतों में मददगार हो सकता है। अल्लाह आपको इसका बेहतरीन अज्र अता फरमाए।",donateContact:"दान/सहयोग के लिए संपर्क:",qrNote:"भुगतान से पहले PhonePe पर प्राप्तकर्ता का नाम MD FIROZ ALAM ज़रूर जाँच लें।",contactTitle:"संपर्क करें",headLabel:"मोहतमिम",headName:"मौलाना मोहम्मद फ़िरोज़ आलम क़ासमी",addressLabel:"पता",address:"कुमरा, वार्ड नंबर 3, थाना महिषी, ज़िला सहरसा, बिहार, भारत",mobileLabel:"मोबाइल",footer:"© जामिया अबुबकर सिद्दीक़ (रज़ि.) • सभी अधिकार सुरक्षित"
-},
-ur: {
-brand:"جامعہ ابوبکر صدیقؓ",navAbout:"تعارف",navEducation:"تعلیم",navAdmission:"داخلہ",navNews:"خبریں",navDonate:"عطیہ",navContact:"رابطہ",tag:"علم کی روشنی، بہتر کل کی طرف",title:"جامعہ ابوبکر صدیقؓ",heroText:"دینی اور بنیادی جدید تعلیم کے ساتھ بچوں کی تعلیم، تربیت اور اچھے اخلاق کے لیے وقف ایک ادارہ۔",heroAdmission:"داخلے کی معلومات",heroDonate:"آن لائن تعاون کریں",aboutTitle:"ہمارا تعارف",aboutText:"جامعہ ابوبکر صدیقؓ کا مقصد طلبہ کو اچھی تعلیم، نظم و ضبط اور بہتر تربیت دینا ہے۔",quote:"علم انسان کو بہتر بناتا ہے اور اچھے اخلاق اس کی پہچان ہیں۔",educationTitle:"ہماری تعلیم",educationIntro:"دینی اور بنیادی جدید تعلیم کے ذریعے بچوں کی صلاحیت اور اعتماد بڑھانا۔",religiousTitle:"دینی تعلیم",religiousText:"قرآن، بنیادی اسلامی تعلیم اور اچھے اخلاق کی تربیت۔",basicTitle:"بنیادی تعلیم",basicText:"پڑھنے، لکھنے اور طلبہ کی بنیادی تعلیمی صلاحیت مضبوط کرنا۔",englishTitle:"انگریزی تعلیم",englishText:"انگریزی زبان سیکھنے اور اعتماد بڑھانے کے مواقع۔",admissionTitle:"داخلہ",admissionIntro:"نیچے معلومات پُر کریں۔ WhatsApp کھلے گا اور تیار پیغام آپ کو خود بھیجنا ہوگا۔",studentLabel:"طالب علم کا نام",guardianLabel:"سرپرست کا نام",ageLabel:"طالب علم کی عمر",courseLabel:"کس جماعت/کورس میں داخلہ چاہیے؟",phoneLabel:"سرپرست کا موبائل نمبر",consentText:"میں رضامند ہوں کہ یہ معلومات داخلے کے سلسلے میں مدرسے کو WhatsApp پر بھیجی جائیں۔",submitLabel:"WhatsApp پر درخواست بھیجیں",formNote:"یہ فارم معلومات ویب سائٹ پر محفوظ نہیں کرتا۔ WhatsApp کھلے گا؛ پیغام آپ کو خود بھیجنا ہوگا۔",newsTitle:"مدرسے کی خبریں",newsIntro:"مدرسے کے اعلانات اور پروگراموں کی معلومات یہاں شائع کی جائیں گی۔",newsSoon:"نئی خبریں جلد",newsPlaceholder:"اگلی اطلاع پر یہاں تاریخ اور خبر کی تفصیل شامل کی جائے گی۔",donateTitle:"مدرسے کے لیے آن لائن تعاون",donateText:"آپ کا تعاون مدرسے کی تعلیمی سرگرمیوں اور ضروریات میں مددگار ہو سکتا ہے۔ اللہ آپ کو بہترین اجر عطا فرمائے۔",donateContact:"عطیہ/تعاون کے لیے رابطہ:",qrNote:"ادائیگی سے پہلے PhonePe پر وصول کنندہ کا نام MD FIROZ ALAM ضرور چیک کریں۔",contactTitle:"رابطہ کریں",headLabel:"مہتمم",headName:"مولانا محمد فیروز عالم قاسمی",addressLabel:"پتہ",address:"کمرا، وارڈ نمبر 3، تھانہ مہیشی، ضلع سہرسہ، بہار، بھارت",mobileLabel:"موبائل",footer:"© جامعہ ابوبکر صدیقؓ • جملہ حقوق محفوظ"
-},
-en: {
-brand:"Jamia Abubakar Siddique (RA)",navAbout:"About",navEducation:"Education",navAdmission:"Admission",navNews:"News",navDonate:"Donate",navContact:"Contact",tag:"The light of knowledge, towards a better tomorrow",title:"Jamia Abubakar Siddique (RA)",heroText:"An institution dedicated to children's education, character-building and good values through religious and foundational modern learning.",heroAdmission:"Admission information",heroDonate:"Support online",aboutTitle:"About Us",aboutText:"Jamia Abubakar Siddique (RA) aims to provide students with good education, discipline and strong values.",quote:"“Knowledge helps a person grow; good character makes them shine.”",educationTitle:"Our Education",educationIntro:"Building children's skills and confidence through religious and foundational modern education.",religiousTitle:"Religious Education",religiousText:"Qur'an, foundational Islamic studies and character development.",basicTitle:"Foundational Education",basicText:"Strengthening students' basic reading, writing and learning skills.",englishTitle:"English Education",englishText:"Opportunities to learn English and build confidence.",admissionTitle:"Admission",admissionIntro:"Fill in the details below. WhatsApp will open with a prepared message; you must send it yourself.",studentLabel:"Student name",guardianLabel:"Parent/guardian name",ageLabel:"Student age",courseLabel:"Class/course applying for",phoneLabel:"Parent/guardian mobile number",consentText:"I agree that these details may be sent to the madrasa on WhatsApp for admission follow-up.",submitLabel:"Send application on WhatsApp",formNote:"This form does not store information on the website. WhatsApp will open; you must send the message yourself.",newsTitle:"Madrasa News",newsIntro:"Announcements and programme updates from the madrasa will be published here.",newsSoon:"News coming soon",newsPlaceholder:"A dated news update will appear here when the madrasa provides an announcement.",donateTitle:"Support the Madrasa Online",donateText:"Your support can help the madrasa's educational activities and essential needs. May Allah reward you abundantly.",donateContact:"For donations/support, contact:",qrNote:"Before paying, verify that the recipient name shown in PhonePe is MD FIROZ ALAM.",contactTitle:"Contact Us",headLabel:"Mohtamim",headName:"Maulana Mohammad Firoz Alam Qasmi",addressLabel:"Address",address:"Kumra, Ward No. 3, Police Station Mahishi, District Saharsa, Bihar, India",mobileLabel:"Mobile",footer:"© Jamia Abubakar Siddique (RA) • All rights reserved"
+function updateHijri(){
+const now = new Date();
+try {
+const hijri = new Intl.DateTimeFormat(
+'en-u-ca-islamic-umalqura',
+{day:'numeric',month:'long',year:'numeric'}
+).format(now);
+document.getElementById('hijri').textContent = hijri;
+} catch(e) {
+document.getElementById('hijri').textContent =
+'Hijri date is not supported by this browser.';
 }
-};
-function setLanguage(lang){
-  const dict=translations[lang]||translations.hi;
-  document.documentElement.lang=lang;
-  document.documentElement.dir=lang==="ur"?"rtl":"ltr";
-  document.querySelectorAll("[data-i]").forEach(el=>{
-    const key=el.getAttribute("data-i");
-    if(dict[key]!==undefined) el.textContent=dict[key];
-  });
-  document.querySelectorAll("[data-lang]").forEach(btn=>btn.classList.toggle("active",btn.dataset.lang===lang));
+document.getElementById('englishDate').textContent =
+now.toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'});
 }
-document.querySelectorAll("[data-lang]").forEach(btn=>btn.addEventListener("click",()=>setLanguage(btn.dataset.lang)));
-document.getElementById("year").textContent=new Date().getFullYear();
-document.getElementById("admissionForm").addEventListener("submit",function(event){
-  event.preventDefault();
-  if(!document.getElementById("consent").checked)return;
-  const fields=new FormData(this);
-  const lang=document.documentElement.lang;
-  const labels=lang==="en"?["Student","Guardian","Age","Class/course","Phone"]:lang==="ur"?["طالب علم","سرپرست","عمر","جماعت/کورس","موبائل"]:["विद्यार्थी","अभिभावक","उम्र","कक्षा/कोर्स","मोबाइल"];
-  const values=["student","guardian","age","course","phone"].map(k=>fields.get(k)||"");
-  const message="Admission enquiry - Jamia Abubakar Siddique (RA)\n"+labels.map((label,i)=>label+": "+values[i]).join("\n");
-  window.open("https://wa.me/919681035071?text="+encodeURIComponent(message),"_blank","noopener");
+updateHijri();
+
+document.getElementById('admissionForm').addEventListener('submit',function(e){
+e.preventDefault();
+const msg =
+"Assalamu Alaikum. Admission enquiry for Jamia Abubakar Siddique (RA):\n"+
+"Student: "+document.getElementById('student').value+"\n"+
+"Guardian: "+document.getElementById('guardian').value+"\n"+
+"Age: "+document.getElementById('age').value+"\n"+
+"Class: "+document.getElementById('course').value+"\n"+
+"Parent Mobile: "+document.getElementById('phone').value;
+window.open("https://wa.me/919681035071?text="+encodeURIComponent(msg),"_blank");
 });
 </script>
+
 </body>
 </html>
