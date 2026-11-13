@@ -488,7 +488,9 @@ text-align:center;
 <button onclick="setLanguage('ur')">اردو</button>
 <button onclick="setLanguage('en')">English</button>
 </div>
-
+<a href="#admin" style="display:inline-block !important;">
+  Admin Dashboard
+</a>
 </nav>
 </header>
 
@@ -1986,7 +1988,22 @@ function renderNotices() {
   loadPrayerTimes();  loadPrayerTimes();
 
 })();
-</script>
+</script><section id="admin">
+  <div class="admin-box">
+    <h2>Admin Dashboard</h2>
+    <input id="adminPin" type="password" placeholder="Enter PIN">
+    <button onclick="adminLogin()">Login</button>
+
+    <div id="adminPanel" class="hidden">
+      <h3>Add Notice</h3>
+      <input id="noticeHeading" placeholder="Notice heading">
+      <textarea id="noticeBody" placeholder="Notice details"></textarea>
+      <button onclick="addNotice()">Publish Notice</button>
+      <div id="adminNoticeList"></div>
+    </div>
+  </div>
+</section>
+  
 
 </body>
 </html>
