@@ -480,6 +480,7 @@ text-align:center;
 <a href="#admission" data-i="admission">Admission</a>
 <a href="#donate" data-i="donate">Donate</a>
 <a href="#contact" data-i="contact">Contact</a>
+<a href="#admin">Admin Dashboard</a>
 </div>
 
 <div class="lang-buttons">
@@ -1720,4 +1721,275 @@ function renderNotices() {
     heading.textContent = notice.heading;
     co
   
+  
+<style>
+#admin { display:block !important; scroll-margin-top:100px; }
+#admin .admin-box { display:block; }
+#adminPanel.hidden { display:none !important; }
+#admin .admin-box input,
+#admin .admin-box textarea {
+  display:block; width:100%; box-sizing:border-box;
+  padding:12px; margin:9px 0; border:1px solid #bbb;
+  border-radius:8px;
+}
+#adminNoticeList .admin-notice {
+  padding:12px; margin:10px 0; border:1px solid #ddd;
+  border-radius:9px;
+}
+#aiAnswer, #prayerLiveStatus {
+  display:block; padding:12px; margin-top:10px;
+  border-radius:8px; background:#f1f1f1;
+}
+</style>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ADMIN DASHBOARD */
+  function getNotices() {
+    try {
+      return JSON.parse(localStorage.getItem("jamiaDemoNotices") || "[]");
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function renderNotices() {
+    const box = document.getElementById("adminNoticeList");
+    if (!box) return;
+
+    box.replaceChildren();
+
+    getNotices().forEach(function (notice, index) {
+      const item = document.createElement("div");
+      item.className = "admin-notice";
+
+      const heading = document.createElement("strong");
+      heading.textContent = notice.heading;
+
+      const body = document.createElement("p");
+      body.textContent = notice.body;
+
+      const del = document.createElement("button");
+      del.textContent = "Delete";
+      del.type = "button";
+      del.addEventListener("click", function () {
+        const list = getNotices();
+        list.splice(index, 1);
+        localStorage.setItem("jamiaDemoNotices", JSON.stringify(list));
+        renderNotices();
+      });
+
+      item.append(heading, body, del);
+      box.appendChild(item);
+    });
+  }
+
+  window.adminLogin = function () {
+    const pin = document.getElementById("adminPin");
+    const panel = document.getElementById("adminPanel");
+
+    if (!pin || !panel) {
+      alert("Admin section ya PIN field nahi mila. HTML check karo.");
+      return;
+    }
+
+    if (pin.value === "1234") {
+      panel.classList.remove("hidden");
+      panel.style.display = "block";
+      renderNotices();
+      alert("Demo Admin Login successful!");
+    } else {
+      alert("PIN galat hai. Demo PIN: 1234");
+    }
+  };
+
+  window.addNotice = function () {
+    const heading = document.getElementById("noticeHeading");
+    const body = document.getElementById("noticeBody");
+
+    if (!heading || !body || !heading.value.trim() || !body.value.trim()) {
+      alert("Notice heading aur details dono likho.");
+      return;
+    }
+
+    const list = getNotices();
+    list.unshift({
+      heading: heading.value.trim(),
+      body: body.value.trim()
+    });
+
+    localStorage.setItem("jamiaDemoNotices", JSON.stringify(list));
+    heading.value = "";
+    body.value = "";
+    renderNotices();
+    alert("Notice is browser mein save ho gaya.");
+  };
+
+  /* LEARNING ASSISTANT - DEMO, NOT REAL AI */
+  window.askLearningAssistant = function () {
+    const input = document.getElementById("aiQuestion");
+    const output = document.getElementById("aiAnswer");
+
+    if (!input || !output) {
+      alert("AI question ya answer box HTML mein nahi mila.");
+      return;
+    }
+
+    const q = input.value.trim().toLowerCase();
+
+    if (!q) {
+      output.textContent = "Pehle apna sawal likho.";
+      return;
+    }
+
+    let answer = "Main abhi demo assistant hoon. Is sawal ka jawab mere demo knowledge mein nahi hai. Apne teacher se bhi pooch sakte ho.";
+
+    if (/hello|hi|salam|assalam/.test(q)) {
+      answer = "Assalamu Alaikum! Aaj kya seekhna chahte ho?";
+    } else if (/arabic|arabi|अरेबी|عربی/.test(q)) {
+      answer = "Arabic seekhne ke liye pehle huruf ki pehchan karo. Roz 5 letters likho aur unka makhraj teacher se seekho.";
+    } else if (/urdu|اردو|उर्दू/.test(q)) {
+      answer = "Roz 5 Urdu words seekho. Unhe likho, padho aur chhote jumlon mein istemal karo.";
+    } else if (/english|انگریزی|अंग्रेजी/.test(q)) {
+      answer = "English practice: roz 5 naye words seekho, unke meanings likho aur har word se ek sentence banao.";
+    } else if (/quran|quraan|कुरआन|قرآن/.test(q)) {
+      answer = "Quran padhte waqt tajweed aur sahi makharij ka khayal rakho. Mushkil pronunciation qualified teacher se seekho.";
+    } else if (/namaz|salah|نماز|नमाज/.test(q)) {
+      answer = "Namaz ke faraiz, wajib aur sunnat apne qualified ustad se seekho. Har namaz apne waqt par ada karo.";
+    } else if (/science|विज्ञान/.test(q)) {
+      answer = "Science ko samajhne ke liye pehle definition padho, phir example aur diagram banao.";
+    } else if (/math|maths|गणित/.test(q)) {
+      answer = "Maths mein pehle formula samjho, solved example dekho aur phir khud 5 questions solve karo.";
+    } else if (/study|पढ़ाई|पढ़ना/.test(q)) {
+      answer = "25 minute focus ke saath padho, 5 minute break lo, phir bina dekhe topic revise karo.";
+    }
+
+    output.textContent = answer;
+  };
+
+  /* PRAYER TIMINGS: MAHISHI, SAHARSA */
+  async function loadPrayerTimes() {
+    const status = document.getElementById("prayerLiveStatus");
+    const notice = document.getElementById("prayerNotice");
+
+    if (status) status.textContent = "Mahishi ke prayer times load ho rahe hain...";
+
+    const url =
+      "https://api.aladhan.com/v1/timingsByCity?city=Mahishi&country=India&state=Bihar&method=1&school=1";
+
+    try {
+      const response = await fetch(url);
+
+      if (!response.ok) throw new Error("Prayer API unavailable");
+
+      const result = await response.json();
+
+      if (result.code !== 200 || !result.data || !result.data.timings) {
+        throw new Error("Prayer data unavailable");
+      }
+
+      const times = result.data.timings;
+      const names = ["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"];
+      const keys = ["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"];
+
+      const rows = document.querySelectorAll("#prayer .prayer");
+
+      rows.forEach(function (row, index) {
+        if (index < 5) {
+          const value = times[keys[index]];
+          const target = row.querySelector("strong, b, .time, span:last-child");
+          if (target && value) target.textContent = value;
+          else if (value) row.textContent = names[index] + ": " + value;
+        }
+      });
+
+      const date = result.data.date.readable;
+      const message = "Times loaded for Mahishi. Date: " + date +
+        ". Calculation: Karachi method; Hanafi Asr.";
+      if (status) status.textContent = message;
+      if (notice) notice.textContent = message +
+        " Local mosque timetable se zaroor verify karein.";
+
+    } catch (error) {
+      const message =
+        "Prayer times load nahi hue. Internet check karein aur local mosque timetable dekhein.";
+      if (status) status.textContent = message;
+      if (notice) notice.textContent = message;
+    }
+  }
+
+  window.loadPrayerTimes = loadPrayerTimes;
+
+  /* HIJRI DATE */
+  function updateHijriDate() {
+    const el = document.getElementById("hijriDate");
+    const greg = document.getElementById("gregDate");
+
+    if (greg) greg.textContent = new Date().toLocaleDateString();
+
+    if (el) {
+      try {
+        el.textContent = new Intl.DateTimeFormat(
+          "en-u-ca-islamic-umalqura",
+          { day:"numeric", month:"long", year:"numeric" }
+        ).format(new Date());
+      } catch (e) {
+        el.textContent = "Hijri date not supported by this browser.";
+      }
+    }
+  }
+
+  /* ESTIMATED EVENT COUNTDOWNS */
+  function updateCountdown(id, dateString) {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    const target = new Date(dateString + "T00:00:00");
+    const now = new Date();
+    const days = Math.ceil((target - now) / 86400000);
+
+    el.textContent = days > 0
+      ? days + " days remaining (estimated)"
+      : "Date passed. Please update the estimated date.";
+  }
+
+  /* WHATSAPP ADMISSION FORM */
+  const form = document.getElementById("admissionForm");
+
+  if (form) {
+    form.onsubmit = function (event) {
+      event.preventDefault();
+
+      const data = new FormData(form);
+      const message =
+        "Jamia Abubakar Siddique (RA) - Admission Application\n" +
+        "Student: " + (data.get("student") || "") + "\n" +
+        "Guardian: " + (data.get("guardian") || "") + "\n" +
+        "Age: " + (data.get("age") || "") + "\n" +
+        "Phone: " + (data.get("phone") || "") + "\n" +
+        "Course: " + (data.get("course") || "");
+
+      window.open(
+        "https://wa.me/919681035071?text=" + encodeURIComponent(message),
+        "_blank"
+      );
+    };
+  }
+
+  /* RUN WHEN PAGE IS READY */
+  updateHijriDate();
+  updateCountdown("ramadanCountdown", "2027-02-08");
+  updateCountdown("fitrCountdown", "2027-03-10");
+  updateCountdown("adhaCountdown", "2027-05-17");
+  loadPrayerTimes();  loadPrayerTimes();
+
+})();
+</script>
+
+</body>
+</html>
+
+
   
