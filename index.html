@@ -1,679 +1,1723 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="hi" dir="ltr">
 <head>
-<meta name="google-site-verification" content="4R2GsQT_4XF3yM8SSV-FQeel8LrCjlvrHx-L4tTeEAw" />
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#064b3b">
-<meta name="description" content="Jamia Abubakar Siddique (RA), Kumra, Mahishi, Saharsa, Bihar. Religious and foundational modern education.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="4R2GsQT_4XF3yM8SSV-FQeel8LrCjlvrHx-L4tTeEAw">
+<meta name="description" content="Jamia Abubakar Siddique RA - Islamic and Modern Education">
+<meta name="theme-color" content="#075443">
+
 <title>Jamia Abubakar Siddique (RA)</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
-:root{--green:#064b3b;--green2:#0b6650;--gold:#d9b66e;--cream:#fbf9f2;--ink:#24352f;--muted:#64736d;--white:#fff}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,"Noto Sans Devanagari","Noto Nastaliq Urdu",sans-serif;line-height:1.7;overflow-x:hidden}
-a{color:inherit}
-.container{width:min(1100px,92%);margin:auto}
-header{background:var(--green);color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 3px 15px #0002}
-.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0;flex-wrap:wrap}
-.brand{font-weight:800;font-size:1.05rem}
-nav{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-nav a{text-decoration:none;font-size:.93rem;color:#fff}
-nav a:hover{color:var(--gold)}
-.langs{display:flex;gap:6px}
-.langs button{border:1px solid #ffffff88;background:transparent;color:#fff;padding:6px 10px;border-radius:20px;cursor:pointer}
-.langs button.active{background:var(--gold);color:#173b30;border-color:var(--gold)}
-.hero{background:linear-gradient(135deg,#064b3b,#0d7055);color:white;padding:72px 0;text-align:center}
-.hero .tag{color:#f0d69c;font-weight:700}
-h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.25;margin:12px 0}
-.hero p{max-width:720px;margin:0 auto 22px;font-size:1.08rem}
-.btn{display:inline-block;background:var(--gold);color:#263a30;text-decoration:none;font-weight:700;padding:11px 20px;border-radius:9px;border:0;cursor:pointer}
-.btn.secondary{background:transparent;border:1px solid #fff;color:#fff;margin-inline-start:8px}
-section{padding:54px 0}
-h2.section-title{text-align:center;color:var(--green);font-size:2rem;margin:0 0 12px}
-.intro{text-align:center;max-width:760px;margin:0 auto 28px;color:var(--muted)}
-.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.card{background:#fff;border-radius:15px;padding:24px;box-shadow:0 8px 24px #174c3512;border:1px solid #e9eee8;min-width:0}
-.card h3{color:var(--green);margin-top:0}
-.quote{background:#edf4ed;border-inline-start:5px solid var(--gold);padding:18px 22px;border-radius:10px;max-width:800px;margin:25px auto 0;text-align:center}
-.admission-wrap{max-width:700px;margin:auto}
-form{display:grid;gap:13px}
-label{font-weight:700;color:var(--green)}
-input,select{width:100%;padding:12px;border:1px solid #cbd7cf;border-radius:8px;font:inherit;background:#fff}
-.consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;color:var(--ink)}
-.consent input{width:auto;margin-top:7px}
-.form-note,.small{font-size:.9rem;color:var(--muted)}
-.news-card{max-width:760px;margin:auto;text-align:center}
-.donate{background:var(--green);color:#fff;border-radius:18px;padding:28px;max-width:760px;margin:auto;text-align:center}
-.donate h2{color:#fff}
-.qr{display:block;width:min(100%,320px);height:auto;margin:20px auto;background:#fff;border-radius:12px;padding:10px}
-.upi{font-weight:700;letter-spacing:.2px}
-.contact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.contact-card{background:#fff;border-radius:14px;padding:20px;box-shadow:0 6px 20px #174c3512;overflow-wrap:anywhere}
-.hijri-date{font-size:1.5rem;color:var(--green);font-weight:bold}
-footer{background:#06382e;color:#fff;text-align:center;padding:18px 10px;font-size:.92rem}
-@media(max-width:760px){
-.topbar{justify-content:center}
-.brand{width:100%;text-align:center}
-nav{justify-content:center;gap:12px}
-nav a{font-size:.88rem}
-.hero{padding:54px 0}
-.cards,.contact-grid{grid-template-columns:1fr}
-section{padding:42px 0}
-.btn.secondary{margin:10px 0 0}
+:root {
+--green:#075443;
+--dark:#043c30;
+--gold:#c9a44e;
+--cream:#fbf8ef;
+--white:#ffffff;
+--text:#24332e;
+--muted:#68766f;
+--border:#e8e2d4;
+--shadow:0 10px 30px rgba(12,65,50,.09);
+}
+
+* {
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html {
+scroll-behavior:smooth;
+}
+
+body {
+background:var(--cream);
+color:var(--text);
+font-family:Poppins,"Noto Sans Devanagari",sans-serif;
+line-height:1.7;
+}
+
+a {
+text-decoration:none;
+color:inherit;
+}
+
+button,input,select,textarea {
+font:inherit;
+}
+
+button {
+cursor:pointer;
+}
+
+.container {
+width:min(1120px,92%);
+margin:auto;
+}
+
+/* TOP BAR */
+
+.topbar {
+background:var(--dark);
+color:white;
+padding:9px 5%;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:10px;
+font-size:12px;
+}
+
+/* HEADER */
+
+header {
+background:var(--green);
+color:white;
+position:sticky;
+top:0;
+z-index:100;
+box-shadow:0 4px 15px #0002;
+}
+
+.navbar {
+max-width:1250px;
+margin:auto;
+padding:15px 20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.brand {
+font-size:17px;
+font-weight:700;
+line-height:1.4;
+}
+
+.brand small {
+display:block;
+font-size:10px;
+color:#f0d99f;
+font-weight:400;
+}
+
+.navlinks {
+display:flex;
+align-items:center;
+gap:14px;
+flex-wrap:wrap;
+font-size:12px;
+}
+
+.navlinks a:hover {
+color:var(--gold);
+}
+
+.lang-buttons button,
+.menu-button {
+background:transparent;
+color:white;
+border:1px solid #ffffff55;
+border-radius:20px;
+padding:6px 9px;
+font-size:11px;
+}
+
+.menu-button {
+display:none;
+}
+
+/* HERO */
+
+.hero {
+background:linear-gradient(120deg,#043c30ee,#08715add);
+color:white;
+text-align:center;
+padding:85px 20px;
+}
+
+.hero-logo {
+height:85px;
+width:85px;
+border:2px solid var(--gold);
+border-radius:50%;
+display:grid;
+place-items:center;
+margin:0 auto 20px;
+color:#f4d98d;
+font-size:38px;
+}
+
+.hero-arabic {
+font-family:"Noto Naskh Arabic",serif;
+color:#f4d98d;
+font-size:28px;
+}
+
+.hero h1 {
+font-size:clamp(26px,5vw,48px);
+margin:10px 0;
+}
+
+.hero p {
+max-width:750px;
+margin:12px auto;
+color:#f0f2eb;
+}
+
+.hero-buttons {
+margin-top:22px;
+}
+
+/* BUTTONS */
+
+.btn {
+display:inline-block;
+padding:11px 19px;
+border:0;
+border-radius:8px;
+background:var(--gold);
+color:#173d31;
+font-weight:600;
+margin:5px 4px;
+transition:.2s;
+}
+
+.btn:hover {
+transform:translateY(-2px);
+}
+
+.btn-outline {
+background:transparent;
+color:var(--gold);
+border:1px solid var(--gold);
+}
+
+/* SECTIONS */
+
+.section {
+padding:60px 0;
+scroll-margin-top:90px;
+}
+
+.section-title {
+text-align:center;
+color:var(--green);
+font-size:clamp(23px,3vw,32px);
+margin-bottom:8px;
+}
+
+.section-subtitle {
+text-align:center;
+color:var(--muted);
+font-size:14px;
+max-width:750px;
+margin:0 auto 30px;
+}
+
+/* CARDS */
+
+.grid {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card {
+background:white;
+border:1px solid var(--border);
+border-radius:15px;
+padding:23px;
+box-shadow:var(--shadow);
+transition:.25s;
+}
+
+.card:hover {
+transform:translateY(-4px);
+}
+
+.card h3 {
+color:var(--green);
+margin-bottom:10px;
+}
+
+.card p {
+color:var(--muted);
+font-size:14px;
+}
+
+/* INTRODUCTION */
+
+.intro-grid {
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+}
+
+.intro-box {
+background:white;
+padding:28px;
+border-radius:15px;
+box-shadow:var(--shadow);
+}
+
+.intro-box h3 {
+color:var(--green);
+margin-bottom:12px;
+}
+
+/* EDUCATION */
+
+.education-card {
+text-align:center;
+}
+
+.education-icon {
+font-size:35px;
+margin-bottom:12px;
+}
+
+/* FEATURE CARDS */
+
+.feature-card {
+text-align:center;
+}
+
+.feature-card .icon {
+font-size:34px;
+margin-bottom:12px;
+}
+
+/* HIGHLIGHT */
+
+.highlight {
+background:var(--green);
+color:white;
+padding:35px;
+border-radius:18px;
+text-align:center;
+}
+
+.highlight h2 {
+color:#f4d98d;
+margin-bottom:12px;
+}
+
+/* FORMS */
+
+.form-grid {
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:13px;
+}
+
+.field {
+width:100%;
+padding:12px;
+border:1px solid var(--border);
+border-radius:8px;
+background:white;
+outline:none;
+}
+
+.field:focus {
+border-color:var(--gold);
+}
+
+.full {
+grid-column:1/-1;
+}
+
+/* ARABIC */
+
+.arabic-text {
+font-family:"Noto Naskh Arabic",serif;
+direction:rtl;
+font-size:29px;
+line-height:2;
+color:var(--green);
+text-align:center;
+}
+
+/* NOTICE */
+
+.notice {
+background:#fff8e8;
+border-left:4px solid var(--gold);
+border-radius:8px;
+padding:14px;
+font-size:13px;
+color:#66552e;
+}
+
+/* FOOTER */
+
+footer {
+background:var(--dark);
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+
+footer a {
+color:#f4d98d;
+}
+
+.footer-arabic {
+font-family:"Noto Naskh Arabic",serif;
+color:#f4d98d;
+font-size:30px;
+}
+
+.footer-links {
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin:20px 0;
+font-size:13px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:850px) {
+.menu-button {
+display:block;
+}
+
+.navbar {
+align-items:center;
+}
+
+.navlinks {
+display:none;
+width:100%;
+flex-direction:column;
+align-items:flex-start;
+padding:15px 0;
+}
+
+.navlinks.open {
+display:flex;
+}
+
+.lang-buttons {
+margin-left:auto;
+}
+
+.intro-grid {
+grid-template-columns:1fr;
+}
+}
+
+@media(max-width:560px) {
+.hero {
+padding:55px 15px;
+}
+
+.section {
+padding:42px 0;
+}
+
+.form-grid {
+grid-template-columns:1fr;
+}
+
+.full {
+grid-column:auto;
+}
+
+.card {
+padding:18px;
+}
+
+.topbar {
+justify-content:center;
+text-align:center;
+}
 }
 </style>
 </head>
 
 <body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+<span>📍 Kumra, Ward No. 3, Mahishi, Saharsa, Bihar</span>
+<span>📞 <a href="tel:+919681035071">9681035071</a></span>
+</div>
+
+<!-- HEADER -->
+
 <header>
-<div class="container topbar">
-<div class="brand" data-i="brand">जामिया अबुबकर सिद्दीक़ (रज़ि.)</div>
-<nav aria-label="Main navigation">
-<a href="#about" data-i="navAbout">परिचय</a>
-<a href="#education" data-i="navEducation">तालीम</a>
-<a href="#admission" data-i="navAdmission">दाख़िला</a>
-<a href="#calendar" data-i="navCalendar">इस्लामी तारीख़</a>
-<a href="#news" data-i="navNews">खबरें</a>
-<a href="#donate" data-i="navDonate">दान</a>
-<a href="#contact" data-i="navContact">संपर्क</a>
+<nav class="navbar">
+
+<a href="#home" class="brand">
+جامعہ ابوبکر صدیقؓ
+<small>Jamia Abubakar Siddique (RA)</small>
+</a>
+
+<button class="menu-button" onclick="toggleMenu()">
+☰ Menu
+</button>
+
+<div class="navlinks" id="navlinks">
+<a href="#home" data-i="home">Home</a>
+<a href="#about" data-i="about">About</a>
+<a href="#education" data-i="education">Education</a>
+<a href="#features" data-i="features">Features</a>
+<a href="#calendar" data-i="calendar">Calendar</a>
+<a href="#library" data-i="library">Library</a>
+<a href="#admission" data-i="admission">Admission</a>
+<a href="#donate" data-i="donate">Donate</a>
+<a href="#contact" data-i="contact">Contact</a>
+</div>
+
+<div class="lang-buttons">
+<button onclick="setLanguage('hi')">हिन्दी</button>
+<button onclick="setLanguage('ur')">اردو</button>
+<button onclick="setLanguage('en')">English</button>
+</div>
+
 </nav>
-<div class="langs" aria-label="Choose language">
-<button type="button" data-lang="hi" class="active">हिन्दी</button>
-<button type="button" data-lang="ur">اردو</button>
-<button type="button" data-lang="en">English</button>
-</div>
-</div>
 </header>
 
-<main>
-<section class="hero">
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+<div class="hero-logo">☪</div>
+
+<div class="hero-arabic">
+بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+</div>
+
+<h1 data-i="heroTitle">
+Jamia Abubakar Siddique (RA)
+</h1>
+
+<p data-i="heroText">
+दीन और आधुनिक शिक्षा का खूबसूरत संगम।
+इल्म, अख़लाक़ और बेहतर मुस्तकबिल की राह।
+</p>
+
+<p class="arabic-text" style="color:#f4d98d">
+علم، ادب اور اچھے اخلاق
+</p>
+
+<div class="hero-buttons">
+<a href="#admission" class="btn" data-i="admissionBtn">
+Online Admission
+</a>
+
+<a href="#donate" class="btn btn-outline" data-i="supportBtn">
+Support Madrasa
+</a>
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
 <div class="container">
-<div class="tag" data-i="tag">इल्म की रोशनी, बेहतर कल की ओर</div>
-<h1 data-i="title">जामिया अबुबकर सिद्दीक़ (रज़ि.)</h1>
-<p data-i="heroText">दीनी और बुनियादी आधुनिक शिक्षा के साथ बच्चों की तालीम, तरबियत और अच्छे अख़लाक़ के लिए समर्पित एक संस्थान।</p>
-<a class="btn" href="#admission" data-i="heroAdmission">दाख़िले की जानकारी</a>
-<a class="btn secondary" href="#donate" data-i="heroDonate">ऑनलाइन सहयोग करें</a>
+
+<h2 class="section-title" data-i="aboutTitle">
+मदरसे का परिचय
+</h2>
+
+<p class="section-subtitle" data-i="aboutSub">
+Jamia Abubakar Siddique (RA)
+</p>
+
+<div class="intro-grid">
+
+<div class="intro-box">
+<h3 data-i="missionTitle">🌙 हमारा मकसद</h3>
+
+<p data-i="missionText">
+बच्चों को अच्छी दीनी तालीम, बुनियादी आधुनिक शिक्षा,
+अच्छे अख़लाक़ और जिम्मेदार नागरिक बनने की राह देना।
+</p>
+
+<br>
+
+<p data-i="missionText2">
+हमारा उद्देश्य ऐसा शैक्षिक माहौल बनाना है जहाँ
+हर विद्यार्थी इल्म, अनुशासन और सेवा की भावना सीखे।
+</p>
+</div>
+
+<div class="intro-box">
+
+<h3 data-i="infoTitle">🏫 मदरसे की जानकारी</h3>
+
+<p><b data-i="nameLabel">नाम:</b> Jamia Abubakar Siddique (RA)</p>
+
+<p>
+<b data-i="mohtamimLabel">मोहतमिम:</b>
+Maulana Mohammad Firoz Alam Qasmi
+</p>
+
+<p>
+<b data-i="addressLabel">पता:</b>
+Kumra, Ward No. 3, Thana Mahishi,
+District Saharsa, Bihar, India.
+</p>
+
+<p>
+<b data-i="phoneLabel">मोबाइल:</b>
+<a href="tel:+919681035071">9681035071</a>
+</p>
+
+</div>
+
+</div>
+
 </div>
 </section>
 
-<section id="about">
+<!-- EDUCATION -->
+
+<section class="section" id="education">
+
 <div class="container">
-<h2 class="section-title" data-i="aboutTitle">हमारा परिचय</h2>
-<p class="intro" data-i="aboutText">जामिया अबुबकर सिद्दीक़ (रज़ि.) का उद्देश्य विद्यार्थियों को अच्छी शिक्षा, अनुशासन और बेहतर संस्कार देना है।</p>
-<div class="quote" data-i="quote">“इल्म इंसान को बेहतर बनाता है और अच्छे अख़लाक़ उसकी पहचान हैं।”</div>
+
+<h2 class="section-title" data-i="educationTitle">
+हमारी तालीम
+</h2>
+
+<p class="section-subtitle" data-i="educationSub">
+विद्यार्थियों की उम्र और स्तर के अनुसार शिक्षा।
+</p>
+
+<div class="grid">
+
+<div class="card education-card">
+<div class="education-icon">📖</div>
+<h3 data-i="deenTitle">दीनी तालीम</h3>
+<p data-i="deenText">
+कुरआन करीम, नाज़रा, दुआएँ और बुनियादी इस्लामी जानकारी।
+</p>
+</div>
+
+<div class="card education-card">
+<div class="education-icon">🗣️</div>
+<h3 data-i="languageTitle">अरबी और उर्दू</h3>
+<p data-i="languageText">
+पढ़ना, लिखना, शब्दावली और रोज़मर्रा की भाषा।
+</p>
+</div>
+
+<div class="card education-card">
+<div class="education-icon">📚</div>
+<h3 data-i="modernTitle">आधुनिक शिक्षा</h3>
+<p data-i="modernText">
+अंग्रेज़ी, गणित और बुनियादी सामान्य ज्ञान।
+</p>
+</div>
+
+<div class="card education-card">
+<div class="education-icon">🌱</div>
+<h3 data-i="akhlaqTitle">अच्छे अख़लाक़</h3>
+<p data-i="akhlaqText">
+अदब, सफाई, अनुशासन, ईमानदारी और दूसरों की मदद।
+</p>
+</div>
+
+</div>
 </div>
 </section>
 
-<section id="education">
+<!-- FEATURES INTRODUCTION -->
+
+<section class="section" id="features">
+
 <div class="container">
-<h2 class="section-title" data-i="educationTitle">हमारी तालीम</h2>
-<p class="intro" data-i="educationIntro">दीनी और बुनियादी आधुनिक शिक्षा के ज़रिये बच्चों की क्षमता और आत्मविश्वास बढ़ाना।</p>
-<div class="cards">
-<article class="card"><h3 data-i="religiousTitle">दीनी तालीम</h3><p data-i="religiousText">क़ुरआन, बुनियादी इस्लामी शिक्षा और अच्छे अख़लाक़ की तरबियत।</p></article>
-<article class="card"><h3 data-i="basicTitle">बुनियादी शिक्षा</h3><p data-i="basicText">पढ़ना, लिखना और विद्यार्थियों की बुनियादी शैक्षिक क्षमता को मज़बूत करना।</p></article>
-<article class="card"><h3 data-i="englishTitle">अंग्रेज़ी शिक्षा</h3><p data-i="englishText">अंग्रेज़ी भाषा सीखने और आत्मविश्वास बढ़ाने के अवसर।</p></article>
+
+<h2 class="section-title" data-i="featureTitle">
+Website Features
+</h2>
+
+<p class="section-subtitle" data-i="featureSub">
+मदरसे की डिजिटल सुविधाएँ।
+</p>
+
+<div class="grid">
+
+<div class="card feature-card">
+<div class="icon">📅</div>
+<h3 data-i="calendarFeature">Islamic Calendar</h3>
+<p data-i="calendarFeatureText">हिजरी तारीख और इस्लामी अवसर।</p>
+</div>
+
+<div class="card feature-card">
+<div class="icon">📖</div>
+<h3 data-i="libraryFeature">Digital Library</h3>
+<p data-i="libraryFeatureText">किताबें, PDF और अध्ययन सामग्री।</p>
+</div>
+
+<div class="card feature-card">
+<div class="icon">🎓</div>
+<h3 data-i="admissionFeature">Online Admission</h3>
+<p data-i="admissionFeatureText">घर बैठे एडमिशन की जानकारी भेजें।</p>
+</div>
+
+<div class="card feature-card">
+<div class="icon">🤖</div>
+<h3 data-i="aiFeature">AI Learning</h3>
+<p data-i="aiFeatureText">पढ़ाई के सवालों में सहायता।</p>
+</div>
+
 </div>
 </div>
 </section>
 
-<section id="admission">
+
+<!-- ISLAMIC CALENDAR -->
+
+<section class="section" id="calendar">
 <div class="container">
-<h2 class="section-title" data-i="admissionTitle">दाख़िला / Admission</h2>
-<p class="intro" data-i="admissionIntro">नीचे जानकारी भरें। WhatsApp खुलेगा और तैयार संदेश आपको खुद भेजना होगा।</p>
-<div class="card admission-wrap">
-<form id="admissionForm">
-<div><label for="student" data-i="studentLabel">विद्यार्थी का नाम</label><input id="student" name="student" required></div>
-<div><label for="guardian" data-i="guardianLabel">अभिभावक का नाम</label><input id="guardian" name="guardian" required></div>
-<div><label for="age" data-i="ageLabel">विद्यार्थी की उम्र</label><input id="age" name="age" type="number" min="3" max="40" required></div>
-<div><label for="course" data-i="courseLabel">किस कक्षा/कोर्स में दाख़िला चाहिए?</label><input id="course" name="course" required></div>
-<div><label for="phone" data-i="phoneLabel">अभिभावक का मोबाइल नंबर</label><input id="phone" name="phone" type="tel" inputmode="tel" required></div>
-<label class="consent"><input type="checkbox" id="consent" required><span data-i="consentText">मैं सहमत हूँ कि ये जानकारी दाख़िले के संबंध में मदरसे को WhatsApp पर भेजी जाए।</span></label>
-<button class="btn" type="submit" data-i="submitLabel">WhatsApp पर आवेदन भेजें</button>
-<p class="form-note" data-i="formNote">यह फॉर्म जानकारी वेबसाइट पर सेव नहीं करता। WhatsApp खुलेगा; संदेश आपको खुद भेजना होगा।</p>
-</form>
+
+<h2 class="section-title" data-i="hijriTitle">इस्लामी कैलेंडर</h2>
+<p class="section-subtitle" data-i="hijriSub">आज की हिजरी तारीख और इस्लामी अवसर।</p>
+
+<div class="grid">
+
+<div class="card" style="text-align:center">
+<h3 data-i="todayHijri">आज की हिजरी तारीख</h3>
+<h2 id="hijriDate">Loading...</h2>
+<p id="gregDate"></p>
+</div>
+
+<div class="card">
+<h3 data-i="upcomingEvents">आने वाले अवसर</h3>
+<p id="eventDate">Loading...</p>
+<p class="small" data-i="moonNote">चाँद दिखने के अनुसार तारीख में अंतर हो सकता है।</p>
+</div>
+
 </div>
 </div>
 </section>
 
-<section id="calendar">
+<!-- DAILY QURAN -->
+
+<section class="section" id="quran">
 <div class="container">
-<h2 class="section-title" data-i="calendarTitle">🕌 इस्लामी कैलेंडर</h2>
-<p class="intro" data-i="calendarIntro">आज की हिजरी तारीख़</p>
-<div class="card news-card">
-<h3 class="hijri-date" id="hijriDate">Loading...</h3>
-<p id="englishDate"></p>
-<p class="small" data-i="moonNote">चाँद देखने के स्थानीय ऐलान के अनुसार हिजरी तारीख़ में एक दिन का अंतर हो सकता है।</p>
+
+<h2 class="section-title" data-i="quranTitle">आज की कुरआन आयत</h2>
+<p class="section-subtitle" data-i="quranSub">आयत पढ़ें और उसका सरल अर्थ समझें।</p>
+
+<div class="card" style="text-align:center">
+
+<div class="arabic-text" id="quranArabic">
+رَبِّ زِدْنِي عِلْمًا
+</div>
+
+<p id="quranMeaning">ऐ मेरे रब! मेरे ज्ञान में वृद्धि फरमा।</p>
+
+<span class="pill" id="quranReference">सूरह ताहा 20:114</span>
+
+<br>
+
+<button class="btn" onclick="nextAyat()" data-i="nextAyat">
+दूसरी आयत देखें
+</button>
+
 </div>
 </div>
 </section>
 
-<!-- DAILY QURAN AYAT -->
-<section id="daily-quran">
-  <div class="container">
-    <h2 class="section-title">📖 Daily Quran Ayat</h2>
-    <div class="card news-card">
-      <h2 id="quranArabic" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</h2>
-      <h3 id="quranReference">Surah Al-Fatiha</h3>
-      <p id="quranMeaning">Allah ke naam se, jo nihayat meherban aur raham karne wala hai.</p>
-      <button class="btn" onclick="nextAyat()">Next Ayat</button>
-    </div>
-  </div>
+<!-- NAMAZ TIMING -->
+
+<section class="section" id="prayer">
+<div class="container">
+
+<h2 class="section-title" data-i="prayerTitle">नमाज़ टाइमिंग</h2>
+
+<p class="section-subtitle" data-i="prayerSub">
+स्थानीय मस्जिद की समय-सारणी यहाँ प्रकाशित करें।
+</p>
+
+<div class="card">
+
+<div class="prayer">
+<b data-i="fajr">फज्र</b>
+<span>स्थानीय समय जोड़ें</span>
+</div>
+
+<div class="prayer">
+<b data-i="zuhr">ज़ुहर</b>
+<span>स्थानीय समय जोड़ें</span>
+</div>
+
+<div class="prayer">
+<b data-i="asr">असर</b>
+<span>स्थानीय समय जोड़ें</span>
+</div>
+
+<div class="prayer">
+<b data-i="maghrib">मग़रिब</b>
+<span>स्थानीय समय जोड़ें</span>
+</div>
+
+<div class="prayer">
+<b data-i="isha">इशा</b>
+<span>स्थानीय समय जोड़ें</span>
+</div>
+
+<div class="prayer">
+<b data-i="jummah">जुमुआ</b>
+<span>स्थानीय समय जोड़ें</span>
+</div>
+
+</div>
+
+<p class="notice" style="margin-top:15px" data-i="prayerNotice">
+नोट: ये समय अभी खाली हैं। महिषी की स्थानीय मस्जिद से सही समय लेकर भरें।
+</p>
+
+</div>
 </section>
 
-<!-- NAMAZ TIMING BOARD -->
-<section id="prayer-times">
-  <div class="container">
-    <h2 class="section-title">🕌 Namaz Timing Board</h2>
-    <p class="intro">Daily Prayer Schedule</p>
-    <div class="cards">
-      <div class="card"><h3>Fajr</h3><p>05:00 AM</p></div>
-      <div class="card"><h3>Zuhr</h3><p>12:15 PM</p></div>
-      <div class="card"><h3>Asr</h3><p>03:45 PM</p></div>
-      <div class="card"><h3>Maghrib</h3><p>05:00 PM</p></div>
-      <div class="card"><h3>Isha</h3><p>06:30 PM</p></div>
-      <div class="card"><h3>Jummah</h3><p>01:00 PM</p></div>
-    </div>
-    <p class="small">Namaz timings are sample values. Please confirm and update according to your local masjid timetable.</p>
-  </div>
-</section>
+<!-- ISLAMIC EVENTS -->
 
-<!-- ISLAMIC EVENT COUNTDOWN -->
-<section id="islamic-events">
-  <div class="container">
-    <h2 class="section-title">🌙 Islamic Events Countdown</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Ramadan</h3>
-        <p id="ramadanCountdown">Calculating...</p>
-      </div>
-      <div class="card">
-        <h3>Eid-ul-Fitr</h3>
-        <p id="eidCountdown">Calculating...</p>
-      </div>
-      <div class="card">
-        <h3>Eid-ul-Adha</h3>
-        <p id="adhaCountdown">Calculating...</p>
-      </div>
-    </div>
-    <p class="small">Dates are estimated using the Umm al-Qura calendar and may differ with local moon sighting.</p>
-  </div>
+<section class="section" id="events">
+<div class="container">
+
+<h2 class="section-title" data-i="eventTitle">इस्लामी अवसर और काउंटडाउन</h2>
+
+<p class="section-subtitle" data-i="eventSub">
+हिजरी कैलेंडर के अनुसार अनुमानित तारीखें।
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3 data-i="ramadan">🌙 रमज़ान</h3>
+<h2 id="ramadanCountdown">Loading...</h2>
+</div>
+
+<div class="card">
+<h3 data-i="eidFitr">🎉 ईद-उल-फ़ित्र</h3>
+<h2 id="fitrCountdown">Loading...</h2>
+</div>
+
+<div class="card">
+<h3 data-i="eidAdha">🐑 ईद-उल-अज़हा</h3>
+<h2 id="adhaCountdown">Loading...</h2>
+</div>
+
+</div>
+</div>
 </section>
 
 <!-- ISLAMIC QUIZ -->
-<section id="islamic-quiz">
-  <div class="container">
-    <h2 class="section-title">🧠 Islamic Quiz</h2>
-    <div class="card news-card">
-      <h3 id="quizQuestion">Islam ka pehla mahina kaunsa hai?</h3>
-      <div id="quizOptions"></div>
-      <p id="quizResult"></p>
-      <p id="quizScore">Score: 0</p>
-      <button class="btn" onclick="nextQuiz()">Next Question</button>
-    </div>
-  </div>
-</section>
-  
-<!-- LIVE VISITOR COUNTER -->
-<section id="visitor-counter" class="section">
-  <h2>🌐 Website Visitors</h2>
-  <div class="card" style="text-align:center;padding:25px">
-    <h3>Total Visitors</h3>
-    <div id="visitorCount" style="font-size:38px;font-weight:bold;color:#c49a45">
-      Loading...
-    </div>
-    <p>Thank you for visiting Jamia Abubakar Siddique (RA)</p>
-  </div>
-</section>
 
-<!-- ONLINE URDU & ARABIC LEARNING -->
-<section id="language-learning" class="section">
-  <h2>📚 Online Urdu & Arabic Learning</h2>
-  <p>Learn Urdu and Arabic step by step.</p>
-
-  <div class="cards">
-    <div class="card">
-      <h3>🔤 Arabic Alphabet</h3>
-      <p>ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي</p>
-      <button class="btn" onclick="showLearning('arabic')">
-        Start Arabic
-      </button>
-    </div>
-
-    <div class="card">
-      <h3>📖 Urdu Learning</h3>
-      <p>Learn basic Urdu words and sentences.</p>
-      <button class="btn" onclick="showLearning('urdu')">
-        Start Urdu
-      </button>
-    </div>
-
-    <div class="card">
-      <h3>📝 Practice Quiz</h3>
-      <p>Test what you have learned.</p>
-      <button class="btn" onclick="showLearning('quiz')">
-        Start Quiz
-      </button>
-    </div>
-  </div>
-
-  <div class="card" id="learningContent"
-       style="margin-top:20px;text-align:center">
-    <h3>Welcome to Language Learning</h3>
-    <p>Select a lesson above to begin.</p>
-  </div>
-</section>
-  
-<section id="news">
+<section class="section" id="quiz">
 <div class="container">
-<h2 class="section-title" data-i="newsTitle">मदरसे की खबरें</h2>
-<p class="intro" data-i="newsIntro">मदरसे की घोषणाएँ और कार्यक्रमों की जानकारी यहाँ प्रकाशित की जाएगी।</p>
-<div class="card news-card">
-<h3 data-i="newsSoon">नई खबरें जल्द</h3>
-<p data-i="newsPlaceholder">अगली सूचना मिलने पर यहाँ तारीख़ और खबर का विवरण जोड़ा जाएगा।</p>
+
+<h2 class="section-title" data-i="quizTitle">इस्लामी क्विज़</h2>
+<p class="section-subtitle" data-i="quizSub">अपना ज्ञान परखें।</p>
+
+<div class="card">
+
+<h3 id="quizQuestion">सवाल लोड हो रहा है...</h3>
+
+<div id="quizOptions"></div>
+
+<p id="quizFeedback" class="status"></p>
+
+<p id="quizScore" class="small">Score: 0</p>
+
+<button class="btn" onclick="nextQuiz()" data-i="nextQuestion">
+अगला सवाल
+</button>
+
 </div>
 </div>
 </section>
 
-<section id="donate">
+<!-- URDU AND ARABIC LEARNING -->
+
+<section class="section" id="learning">
 <div class="container">
-<div class="donate">
-<h2 data-i="donateTitle">मदरसे के लिए ऑनलाइन सहयोग</h2>
-<p data-i="donateText">आपका सहयोग मदरसे की तालीमी गतिविधियों और ज़रूरतों में मददगार हो सकता है। अल्लाह आपको इसका बेहतरीन अज्र अता फरमाए।</p>
-<p><strong data-i="donateContact">दान/सहयोग के लिए संपर्क:</strong> <a href="tel:+919681035071">+91 96810 35071</a></p>
-<img class="qr" src="phonepe-qr.png" alt="PhonePe QR code for MD Firoz Alam">
-<p class="upi">UPI ID: 96810350710@ibl</p>
-<p>Payee: MD FIROZ ALAM</p>
-<p class="small" style="color:#f5ead1" data-i="qrNote">भुगतान से पहले PhonePe पर प्राप्तकर्ता का नाम MD FIROZ ALAM ज़रूर जाँच लें।</p>
+
+<h2 class="section-title" data-i="learningTitle">
+ऑनलाइन उर्दू और अरबी सीखें
+</h2>
+
+<p class="section-subtitle" data-i="learningSub">
+बुनियादी अक्षर और शब्द सीखें।
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3 data-i="arabicAlphabet">🔤 अरबी अक्षर</h3>
+<p class="arabic-text">
+ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي
+</p>
+<button class="btn" onclick="showLesson('arabic')" data-i="startArabic">
+अरबी सीखें
+</button>
+</div>
+
+<div class="card">
+<h3 data-i="urduWords">📖 उर्दू के शब्द</h3>
+<p class="arabic-text">کتاب پانی علم مدرسہ سلام</p>
+<button class="btn" onclick="showLesson('urdu')" data-i="startUrdu">
+उर्दू सीखें
+</button>
+</div>
+
+<div class="card">
+<h3 data-i="practice">📝 अभ्यास</h3>
+<p data-i="practiceText">सीखे हुए शब्दों का अभ्यास करें।</p>
+<button class="btn" onclick="showLesson('practice')" data-i="startPractice">
+अभ्यास शुरू करें
+</button>
+</div>
+
+</div>
+
+<div class="card" id="lessonOutput" style="margin-top:20px;text-align:center">
+Welcome to Language Learning
+</div>
+
+</div>
+</section>
+
+<!-- DIGITAL LIBRARY -->
+
+<section class="section" id="library">
+<div class="container">
+
+<h2 class="section-title" data-i="digitalLibrary">
+📚 डिजिटल लाइब्रेरी
+</h2>
+
+<p class="section-subtitle" data-i="librarySub">
+विद्यार्थियों के लिए किताबें और PDF।
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>🔤 Arabic Alphabet Practice</h3>
+<p data-i="arabicPdfText">अरबी अक्षरों की अभ्यास शीट।</p>
+
+<a class="btn"
+href="library/arabic-alphabet-practice.pdf"
+target="_blank" rel="noopener" data-i="openPdf">
+PDF खोलें
+</a>
+
+<a class="btn btn-outline"
+href="library/arabic-alphabet-practice.pdf"
+download data-i="downloadPdf">
+Download
+</a>
+</div>
+
+<div class="card">
+<h3>📖 Basic Urdu Vocabulary</h3>
+<p data-i="urduPdfText">उर्दू के बुनियादी शब्द और उनके अर्थ।</p>
+
+<a class="btn"
+href="library/basic-urdu-vocabulary.pdf"
+target="_blank" rel="noopener" data-i="openPdf">
+PDF खोलें
+</a>
+
+<a class="btn btn-outline"
+href="library/basic-urdu-vocabulary.pdf"
+download data-i="downloadPdf">
+Download
+</a>
+</div>
+
+<div class="card">
+<h3>🌱 Student Study & Adab Guide</h3>
+<p data-i="adabPdfText">पढ़ाई की अच्छी आदतें और अख़लाक़।</p>
+
+<a class="btn"
+href="library/student-study-and-adab-guide.pdf"
+target="_blank" rel="noopener" data-i="openPdf">
+PDF खोलें
+</a>
+
+<a class="btn btn-outline"
+href="library/student-study-and-adab-guide.pdf"
+download data-i="downloadPdf">
+Download
+</a>
+</div>
+
+</div>
+
+<p class="notice" style="margin-top:20px" data-i="libraryNotice">
+PDF खोलने के लिए GitHub में library नाम का folder बनाकर सभी PDF उसमें upload करें।
+</p>
+
+</div>
+</section>
+
+<!-- AI LEARNING ASSISTANT -->
+
+<section class="section" id="ai">
+<div class="container">
+
+<h2 class="section-title" data-i="aiTitle">
+🤖 AI Learning Assistant
+</h2>
+
+<p class="section-subtitle" data-i="aiSub">
+पढ़ाई के सवालों में सहायता पाने के लिए सवाल लिखें।
+</p>
+
+<div class="card">
+
+<textarea
+class="field"
+id="aiQuestion"
+rows="4"
+placeholder="Write your question here..."
+></textarea>
+
+<button class="btn" onclick="askLearningAssistant()" data-i="askAI">
+जवाब देखें
+</button>
+
+<div id="aiAnswer" class="notice" style="margin-top:15px">
+Your answer will appear here.
+</div>
+
+<p class="small" data-i="aiNote">
+यह अभी demo assistant है, असली AI API से जुड़ा नहीं है।
+धार्मिक मसलों की पुष्टि योग्य आलिम से करें।
+</p>
+
 </div>
 </div>
 </section>
 
-<section id="contact">
+<!-- ADMISSION -->
+
+<section class="section" id="admission">
 <div class="container">
-<h2 class="section-title" data-i="contactTitle">संपर्क करें</h2>
-<div class="contact-grid">
-<div class="contact-card"><h3 data-i="headLabel">मोहतमिम</h3><p data-i="headName">मौलाना मोहम्मद फ़िरोज़ आलम क़ासमी</p></div>
-<div class="contact-card"><h3 data-i="addressLabel">पता</h3><p data-i="address">कुमरा, वार्ड नंबर 3, थाना महिषी, ज़िला सहरसा, बिहार, भारत</p></div>
-<div class="contact-card"><h3 data-i="mobileLabel">मोबाइल</h3><p><a href="tel:+919681035071">+91 96810 35071</a></p></div>
+
+<h2 class="section-title" data-i="admissionTitle">
+ऑनलाइन एडमिशन
+</h2>
+
+<p class="section-subtitle" data-i="admissionSub">
+फॉर्म भरें और WhatsApp पर भेजें।
+</p>
+
+<div class="card">
+
+<form id="admissionForm">
+
+<div class="form-grid">
+
+<input
+class="field"
+name="student"
+placeholder="Student Name / विद्यार्थी का नाम"
+required
+>
+
+<input
+class="field"
+name="guardian"
+placeholder="Guardian Name / अभिभावक का नाम"
+required
+>
+
+<input
+class="field"
+name="age"
+type="number"
+min="3"
+max="100"
+placeholder="Age / उम्र"
+required
+>
+
+<input
+class="field"
+name="phone"
+type="tel"
+placeholder="Mobile Number / मोबाइल नंबर"
+required
+>
+
+<select class="field full" name="course" required>
+<option value="">Select Course / कोर्स चुनें</option>
+<option>Nazra Quran</option>
+<option>Deeni Taleem</option>
+<option>Arabic / Urdu</option>
+<option>English Education</option>
+</select>
+
+<label class="full small">
+<input type="checkbox" required>
+I agree to send my details through WhatsApp.
+</label>
+
+<button class="btn full" type="submit" data-i="submitAdmission">
+WhatsApp पर आवेदन भेजें
+</button>
+
+</div>
+</form>
+
 </div>
 </div>
 </section>
-</main>
+
+<!-- NEWS AND NOTICES -->
+
+<section class="section" id="news">
+<div class="container">
+
+<h2 class="section-title" data-i="newsTitle">
+मदरसे की खबरें और नोटिस
+</h2>
+
+<p class="section-subtitle" data-i="newsSub">
+मदरसे की नई घोषणाएँ और कार्यक्रम।
+</p>
+
+<div class="card" style="text-align:center">
+<h3 data-i="newsSoon">नई खबरें जल्द उपलब्ध होंगी।</h3>
+<p data-i="newsText">
+मदरसे की घोषणाएँ यहाँ प्रकाशित की जाएँगी।
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- VISITOR COUNTER -->
+
+<section class="section" id="visitors">
+<div class="container">
+
+<h2 class="section-title" data-i="visitorTitle">
+🌐 Website Visitors
+</h2>
+
+<div class="card" style="text-align:center">
+
+<h2 id="visitorCount">Counter setup required</h2>
+
+<p class="small" data-i="visitorNote">
+सार्वजनिक visitor counter के लिए analytics service configure करनी होगी।
+</p>
+
+</div>
+</div>
+</section>
+
+<!-- DONATION -->
+
+<section class="section" id="donate">
+<div class="container">
+
+<div class="highlight">
+
+<h2 data-i="donationTitle">
+मदरसे के लिए ऑनलाइन सहयोग
+</h2>
+
+<p data-i="donationText">
+आपका सहयोग मदरसे की तालीमी गतिविधियों में मददगार हो सकता है।
+अल्लाह आपको इसका बेहतरीन बदला अता फरमाए।
+</p>
+
+<div class="grid" style="margin-top:25px">
+
+<div class="card" style="color:#24332e">
+
+<img
+src="phonepe-qr.png"
+alt="PhonePe Donation QR"
+style="width:220px;display:block;margin:10px auto;border-radius:12px"
+>
+
+<h3>PhonePe / UPI</h3>
+
+<p><b>UPI ID:</b> 96810350710@ibl</p>
+
+<p><b>Payee:</b> MD FIROZ ALAM</p>
+
+</div>
+
+<div class="card" style="color:#24332e">
+
+<h3 data-i="donationHelp">
+दान करने में मदद करें
+</h3>
+
+<p data-i="donationInstruction">
+UPI ऐप से QR scan करें और भुगतान से पहले प्राप्तकर्ता का नाम जाँचें।
+</p>
+
+<a
+class="btn"
+href="upi://pay?pa=96810350710@ibl&pn=MD%20FIROZ%20ALAM&cu=INR"
+data-i="payNow"
+>
+Pay via UPI
+</a>
+
+<p class="small" data-i="receiptNote">
+दान की रसीद मदरसे के अधिकृत प्रबंधन से प्राप्त करें।
+</p>
+
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="section" id="contact">
+<div class="container">
+
+<h2 class="section-title" data-i="contactTitle">
+संपर्क करें
+</h2>
+
+<p class="section-subtitle" data-i="contactSub">
+हमसे संपर्क करने के लिए नीचे दिए गए विवरण का उपयोग करें।
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>📍 Address</h3>
+<p>Kumra, Ward No. 3, Mahishi, Saharsa, Bihar, India.</p>
+</div>
+
+<div class="card">
+<h3>📞 Phone</h3>
+<p><a href="tel:+919681035071">9681035071</a></p>
+</div>
+
+<div class="card">
+<h3>💬 WhatsApp</h3>
+<a class="btn" href="https://wa.me/919681035071" target="_blank" rel="noopener">
+Chat on WhatsApp
+</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
 
 <footer>
-<span data-i="footer">© जामिया अबुबकर सिद्दीक़ (रज़ि.) • सभी अधिकार सुरक्षित</span>
-<span id="year"></span>
+
+<div class="footer-arabic">
+جامعہ ابوبکر صدیقؓ
+</div>
+
+<h3>Jamia Abubakar Siddique (RA)</h3>
+
+<p data-i="footerText">
+दीन और आधुनिक शिक्षा का संगम।
+</p>
+
+<div class="footer-links">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#admission">Admission</a>
+<a href="#library">Library</a>
+<a href="#contact">Contact</a>
+</div>
+
+<p>
+Mohtamim: Maulana Mohammad Firoz Alam Qasmi
+</p>
+
+<p>
+Kumra, Ward No. 3, Mahishi, Saharsa, Bihar
+</p>
+
+<p>
+<a href="tel:+919681035071">9681035071</a>
+</p>
+
+<p class="small" style="color:#c8d8d0">
+© <span id="year"></span> Jamia Abubakar Siddique (RA).
+All rights reserved.
+</p>
+
 </footer>
 
+
+
+<style>
+.prayer {
+  display:flex; justify-content:space-between; gap:12px;
+  padding:12px; margin:8px 0; border:1px solid #ddd;
+  border-radius:10px; flex-wrap:wrap;
+}
+.status,.pill {
+  display:inline-block; padding:5px 10px; border-radius:20px;
+  background:#eee; font-size:13px;
+}
+.hidden { display:none !important; }
+.admin-box {
+  max-width:650px; margin:20px auto; padding:18px;
+  border:1px solid #ddd; border-radius:14px;
+}
+.admin-box input,.admin-box textarea {
+  width:100%; padding:11px; margin:7px 0;
+  border:1px solid #ccc; border-radius:8px;
+}
+.admin-notice {
+  padding:10px; margin:8px 0; background:#f1f1f1;
+  border-radius:8px;
+}
+</style>
+
+<!-- ADMIN DASHBOARD: DEMO ONLY -->
+<section id="admin" class="section">
+  <div class="admin-box">
+    <h2 data-i="adminTitle">Admin Dashboard</h2>
+    <p data-i="adminNotice">Demo dashboard. Isme sensitive student data mat rakhein.</p>
+
+    <input id="adminPin" type="password" placeholder="Demo PIN">
+    <button onclick="adminLogin()" data-i="adminLogin">Login</button>
+
+    <div id="adminPanel" class="hidden">
+      <h3 data-i="addNotice">Add Notice</h3>
+      <input id="noticeHeading" placeholder="Notice heading">
+      <textarea id="noticeBody" placeholder="Notice details"></textarea>
+      <button onclick="addNotice()" data-i="publishNotice">Publish Notice</button>
+      <div id="adminNoticeList"></div>
+    </div>
+  </div>
+</section>
+
 <script>
+/* THREE LANGUAGE TRANSLATION */
 const translations = {
-hi:{
-brand:"जामिया अबुबकर सिद्दीक़ (रज़ि.)",
-navAbout:"परिचय",navEducation:"तालीम",navAdmission:"दाख़िला",navCalendar:"इस्लामी तारीख़",navNews:"खबरें",navDonate:"दान",navContact:"संपर्क",
-tag:"इल्म की रोशनी, बेहतर कल की ओर",title:"जामिया अबुबकर सिद्दीक़ (रज़ि.)",
-heroText:"दीनी और बुनियादी आधुनिक शिक्षा के साथ बच्चों की तालीम, तरबियत और अच्छे अख़लाक़ के लिए समर्पित एक संस्थान।",
-heroAdmission:"दाख़िले की जानकारी",heroDonate:"ऑनलाइन सहयोग करें",
-aboutTitle:"हमारा परिचय",aboutText:"जामिया अबुबकर सिद्दीक़ (रज़ि.) का उद्देश्य विद्यार्थियों को अच्छी शिक्षा, अनुशासन और बेहतर संस्कार देना है।",
-quote:"“इल्म इंसान को बेहतर बनाता है और अच्छे अख़लाक़ उसकी पहचान हैं।”",
-educationTitle:"हमारी तालीम",educationIntro:"दीनी और बुनियादी आधुनिक शिक्षा के ज़रिये बच्चों की क्षमता और आत्मविश्वास बढ़ाना।",
-religiousTitle:"दीनी तालीम",religiousText:"क़ुरआन, बुनियादी इस्लामी शिक्षा और अच्छे अख़लाक़ की तरबियत।",
-basicTitle:"बुनियादी शिक्षा",basicText:"पढ़ना, लिखना और विद्यार्थियों की बुनियादी शैक्षिक क्षमता को मज़बूत करना।",
-englishTitle:"अंग्रेज़ी शिक्षा",englishText:"अंग्रेज़ी भाषा सीखने और आत्मविश्वास बढ़ाने के अवसर।",
-admissionTitle:"दाख़िला / Admission",admissionIntro:"नीचे जानकारी भरें। WhatsApp खुलेगा और तैयार संदेश आपको खुद भेजना होगा।",
-studentLabel:"विद्यार्थी का नाम",guardianLabel:"अभिभावक का नाम",ageLabel:"विद्यार्थी की उम्र",
-courseLabel:"किस कक्षा/कोर्स में दाख़िला चाहिए?",phoneLabel:"अभिभावक का मोबाइल नंबर",
-consentText:"मैं सहमत हूँ कि ये जानकारी दाख़िले के संबंध में मदरसे को WhatsApp पर भेजी जाए।",
-submitLabel:"WhatsApp पर आवेदन भेजें",formNote:"यह फॉर्म जानकारी वेबसाइट पर सेव नहीं करता। WhatsApp खुलेगा; संदेश आपको खुद भेजना होगा।",
-calendarTitle:"🕌 इस्लामी कैलेंडर",calendarIntro:"आज की हिजरी तारीख़",
-moonNote:"चाँद देखने के स्थानीय ऐलान के अनुसार हिजरी तारीख़ में एक दिन का अंतर हो सकता है।",
-newsTitle:"मदरसे की खबरें",newsIntro:"मदरसे की घोषणाएँ और कार्यक्रमों की जानकारी यहाँ प्रकाशित की जाएगी।",
-newsSoon:"नई खबरें जल्द",newsPlaceholder:"अगली सूचना मिलने पर यहाँ तारीख़ और खबर का विवरण जोड़ा जाएगा।",
-donateTitle:"मदरसे के लिए ऑनलाइन सहयोग",donateText:"आपका सहयोग मदरसे की तालीमी गतिविधियों और ज़रूरतों में मददगार हो सकता है। अल्लाह आपको इसका बेहतरीन अज्र अता फरमाए।",
-donateContact:"दान/सहयोग के लिए संपर्क:",qrNote:"भुगतान से पहले PhonePe पर प्राप्तकर्ता का नाम MD FIROZ ALAM ज़रूर जाँच लें।",
-contactTitle:"संपर्क करें",headLabel:"मोहतमिम",headName:"मौलाना मोहम्मद फ़िरोज़ आलम क़ासमी",
-addressLabel:"पता",address:"कुमरा, वार्ड नंबर 3, थाना महिषी, ज़िला सहरसा, बिहार, भारत",
-mobileLabel:"मोबाइल",footer:"© जामिया अबुबकर सिद्दीक़ (रज़ि.) • सभी अधिकार सुरक्षित"
+hi: {
+home:"होम",about:"हमारे बारे में",education:"शिक्षा",features:"सुविधाएँ",
+calendar:"हिजरी कैलेंडर",library:"डिजिटल लाइब्रेरी",admission:"प्रवेश",
+donate:"दान करें",contact:"संपर्क",
+heroTitle:"जामिया अबूबकर सिद्दीक़ (रज़ि.)",
+heroText:"दीन और आधुनिक शिक्षा का एक खूबसूरत संगम।",
+admissionBtn:"प्रवेश के लिए आवेदन करें",supportBtn:"दान करें",
+aboutTitle:"हमारे बारे में",aboutSub:"हमारा परिचय",
+missionTitle:"हमारा मिशन",missionText:"बच्चों को अच्छी इस्लामी और आधुनिक शिक्षा देना।",
+missionText2:"इल्म, अमल और अच्छे अखलाक को बढ़ावा देना।",
+infoTitle:"संस्थान की जानकारी",nameLabel:"संस्थान का नाम",
+mohtamimLabel:"मोहतमिम",addressLabel:"पता",phoneLabel:"मोबाइल",
+educationTitle:"हमारी शिक्षा",educationSub:"बच्चों के लिए शिक्षा",
+deenTitle:"दीनी शिक्षा",deenText:"कुरआन, हदीस और इस्लामी तालीम।",
+languageTitle:"भाषा शिक्षा",languageText:"अरबी, उर्दू और अंग्रेज़ी।",
+modernTitle:"आधुनिक शिक्षा",modernText:"बुनियादी आधुनिक विषयों की शिक्षा।",
+akhlaqTitle:"अखलाक",akhlaqText:"अच्छे व्यवहार और अनुशासन की शिक्षा।",
+featureTitle:"हमारी सुविधाएँ",featureSub:"सीखने के लिए उपयोगी सुविधाएँ",
+calendarFeature:"हिजरी कैलेंडर",calendarFeatureText:"इस्लामी तारीख और त्योहार।",
+libraryFeature:"डिजिटल लाइब्रेरी",libraryFeatureText:"अध्ययन सामग्री और PDF।",
+admissionFeature:"ऑनलाइन प्रवेश",admissionFeatureText:"ऑनलाइन आवेदन की सुविधा।",
+aiFeature:"लर्निंग असिस्टेंट",aiFeatureText:"पढ़ाई में मदद करने वाला डेमो।",
+hijriTitle:"हिजरी कैलेंडर",hijriSub:"आज की इस्लामी तारीख",
+todayHijri:"आज की तारीख",upcomingEvents:"आने वाले त्योहार",
+moonNote:"चाँद दिखने के अनुसार तारीख में अंतर हो सकता है।",
+quranTitle:"आज की कुरआन आयत",quranSub:"कुरआन से सीखें",
+nextAyat:"अगली आयत",prayerTitle:"नमाज़ का समय",
+prayerSub:"स्थानीय समय-सारणी यहाँ जोड़ें",
+fajr:"फज्र",zuhr:"ज़ुहर",asr:"असर",maghrib:"मग़रिब",
+isha:"ईशा",jummah:"जुमा",prayerNotice:"नमाज़ के समय स्थानीय सत्यापित समय-सारणी से भरें।",
+eventTitle:"इस्लामी त्योहार",eventSub:"अनुमानित उलटी गिनती",
+ramadan:"रमज़ान",eidFitr:"ईद-उल-फित्र",eidAdha:"ईद-उल-अज़हा",
+quizTitle:"इस्लामी क्विज़",quizSub:"अपना ज्ञान जाँचें",
+nextQuestion:"अगला सवाल",learningTitle:"सीखने का कोना",
+learningSub:"अरबी और उर्दू सीखें",arabicAlphabet:"अरबी अक्षर",
+startArabic:"अरबी सीखें",urduWords:"उर्दू शब्द",
+startUrdu:"उर्दू सीखें",practice:"अभ्यास",practiceText:"रोज़ थोड़ा अभ्यास करें।",
+startPractice:"अभ्यास शुरू करें",digitalLibrary:"डिजिटल लाइब्रेरी",
+librarySub:"PDF किताबें",arabicPdfText:"अरबी अक्षर अभ्यास",
+urduPdfText:"बुनियादी उर्दू शब्द",adabPdfText:"अध्ययन और अदब गाइड",
+openPdf:"खोलें",downloadPdf:"डाउनलोड",libraryNotice:"PDF देखने के लिए फाइलें अपलोड करें।",
+aiTitle:"AI लर्निंग असिस्टेंट",aiSub:"पढ़ाई से जुड़ा सवाल पूछें",
+askAI:"सवाल पूछें",aiNote:"यह केवल एक साधारण डेमो है, असली AI सेवा नहीं।",
+admissionTitle:"ऑनलाइन प्रवेश फॉर्म",admissionSub:"जानकारी भरकर WhatsApp पर भेजें",
+submitAdmission:"WhatsApp पर भेजें",newsTitle:"नोटिस बोर्ड",
+newsSub:"संस्थान की खबरें",newsSoon:"जल्द अपडेट होगा",
+newsText:"नए नोटिस यहाँ प्रकाशित होंगे।",
+visitorTitle:"विज़िटर जानकारी",visitorNote:"वास्तविक कुल विज़िटर के लिए analytics सेवा जोड़नी होगी।",
+donationTitle:"दान और सहयोग",donationText:"संस्थान की शिक्षा और विकास में सहयोग करें।",
+donationHelp:"आपका सहयोग बच्चों की शिक्षा में मदद करेगा।",
+donationInstruction:"QR कोड स्कैन करके भुगतान करें।",
+payNow:"UPI से भुगतान",receiptNote:"भुगतान की रसीद अपने पास रखें।",
+contactTitle:"संपर्क करें",contactSub:"हमसे जुड़ें",
+footerText:"इल्म, अमल और अखलाक की राह।",
+adminTitle:"एडमिन डैशबोर्ड",adminNotice:"यह डेमो है। इसमें निजी छात्र जानकारी न रखें।",
+adminLogin:"लॉगिन",addNotice:"नया नोटिस जोड़ें",
+publishNotice:"नोटिस प्रकाशित करें"
 },
-
-ur:{
-brand:"جامعہ ابوبکر صدیقؓ",
-navAbout:"تعارف",navEducation:"تعلیم",navAdmission:"داخلہ",navCalendar:"اسلامی تاریخ",navNews:"خبریں",navDonate:"عطیہ",navContact:"رابطہ",
-tag:"علم کی روشنی، بہتر کل کی طرف",title:"جامعہ ابوبکر صدیقؓ",
-heroText:"دینی اور بنیادی جدید تعلیم کے ساتھ بچوں کی تعلیم، تربیت اور اچھے اخلاق کے لیے وقف ایک ادارہ۔",
-heroAdmission:"داخلے کی معلومات",heroDonate:"آن لائن تعاون کریں",
-aboutTitle:"ہمارا تعارف",aboutText:"جامعہ ابوبکر صدیقؓ کا مقصد طلبہ کو اچھی تعلیم، نظم و ضبط اور بہتر تربیت دینا ہے۔",
-quote:"علم انسان کو بہتر بناتا ہے اور اچھے اخلاق اس کی پہچان ہیں۔",
-educationTitle:"ہماری تعلیم",educationIntro:"دینی اور بنیادی جدید تعلیم کے ذریعے بچوں کی صلاحیت اور اعتماد بڑھانا۔",
-religiousTitle:"دینی تعلیم",religiousText:"قرآن، بنیادی اسلامی تعلیم اور اچھے اخلاق کی تربیت۔",
-basicTitle:"بنیادی تعلیم",basicText:"پڑھنے، لکھنے اور طلبہ کی بنیادی تعلیمی صلاحیت مضبوط کرنا۔",
-englishTitle:"انگریزی تعلیم",englishText:"انگریزی زبان سیکھنے اور اعتماد بڑھانے کے مواقع۔",
-admissionTitle:"داخلہ",admissionIntro:"نیچے معلومات پُر کریں۔ WhatsApp کھلے گا اور تیار پیغام آپ کو خود بھیجنا ہوگا۔",
-studentLabel:"طالب علم کا نام",guardianLabel:"سرپرست کا نام",ageLabel:"طالب علم کی عمر",
-courseLabel:"کس جماعت/کورس میں داخلہ چاہیے؟",phoneLabel:"سرپرست کا موبائل نمبر",
-consentText:"میں رضامند ہوں کہ یہ معلومات داخلے کے سلسلے میں مدرسے کو WhatsApp پر بھیجی جائیں۔",
-submitLabel:"WhatsApp پر درخواست بھیجیں",formNote:"یہ فارم معلومات ویب سائٹ پر محفوظ نہیں کرتا۔ WhatsApp کھلے گا؛ پیغام آپ کو خود بھیجنا ہوگا۔",
-calendarTitle:"🕌 اسلامی کیلنڈر",calendarIntro:"آج کی ہجری تاریخ",
-moonNote:"مقامی چاند دیکھنے کے اعلان کے مطابق ہجری تاریخ میں ایک دن کا فرق ہو سکتا ہے۔",
-newsTitle:"مدرسے کی خبریں",newsIntro:"مدرسے کے اعلانات اور پروگراموں کی معلومات یہاں شائع کی جائیں گی۔",
-newsSoon:"نئی خبریں جلد",newsPlaceholder:"اگلی اطلاع پر یہاں تاریخ اور خبر کی تفصیل شامل کی جائے گی۔",
-donateTitle:"مدرسے کے لیے آن لائن تعاون",donateText:"آپ کا تعاون مدرسے کی تعلیمی سرگرمیوں اور ضروریات میں مددگار ہو سکتا ہے۔ اللہ آپ کو بہترین اجر عطا فرمائے۔",
-donateContact:"عطیہ/تعاون کے لیے رابطہ:",qrNote:"ادائیگی سے پہلے PhonePe پر وصول کنندہ کا نام MD FIROZ ALAM ضرور چیک کریں۔",
-contactTitle:"رابطہ کریں",headLabel:"مہتمم",headName:"مولانا محمد فیروز عالم قاسمی",
-addressLabel:"پتہ",address:"کمرا، وارڈ نمبر 3، تھانہ مہیشی، ضلع سہرسہ، بہار، بھارت",
-mobileLabel:"موبائل",footer:"© جامعہ ابوبکر صدیقؓ • جملہ حقوق محفوظ"
+en: {
+home:"Home",about:"About",education:"Education",features:"Features",
+calendar:"Hijri Calendar",library:"Digital Library",admission:"Admission",
+donate:"Donate",contact:"Contact",
+heroTitle:"Jamia Abubakar Siddique (RA)",
+heroText:"A beautiful combination of Islamic and modern education.",
+admissionBtn:"Apply for Admission",supportBtn:"Donate",
+aboutTitle:"About Us",aboutSub:"Introduction",
+missionTitle:"Our Mission",missionText:"To provide children with quality Islamic and modern education.",
+missionText2:"To promote knowledge, practice and good character.",
+infoTitle:"Institution Information",nameLabel:"Institution Name",
+mohtamimLabel:"Mohtamim",addressLabel:"Address",phoneLabel:"Mobile",
+educationTitle:"Our Education",educationSub:"Education for children",
+deenTitle:"Islamic Education",deenText:"Quran, Hadith and Islamic studies.",
+languageTitle:"Language Education",languageText:"Arabic, Urdu and English.",
+modernTitle:"Modern Education",modernText:"Basic modern subjects.",
+akhlaqTitle:"Good Character",akhlaqText:"Good manners and discipline.",
+featureTitle:"Our Features",featureSub:"Useful learning facilities",
+calendarFeature:"Hijri Calendar",calendarFeatureText:"Islamic dates and events.",
+libraryFeature:"Digital Library",libraryFeatureText:"Study materials and PDFs.",
+admissionFeature:"Online Admission",admissionFeatureText:"Apply online.",
+aiFeature:"Learning Assistant",aiFeatureText:"A demo study helper.",
+hijriTitle:"Hijri Calendar",hijriSub:"Today's Islamic date",
+todayHijri:"Today's Date",upcomingEvents:"Upcoming Events",
+moonNote:"Dates may differ according to local moon sighting.",
+quranTitle:"Quran Ayah of the Day",quranSub:"Learn from the Quran",
+nextAyat:"Next Ayah",prayerTitle:"Prayer Timings",
+prayerSub:"Add your local timetable here",
+fajr:"Fajr",zuhr:"Dhuhr",asr:"Asr",maghrib:"Maghrib",
+isha:"Isha",jummah:"Jumu'ah",prayerNotice:"Enter verified local prayer timings.",
+eventTitle:"Islamic Events",eventSub:"Estimated countdown",
+ramadan:"Ramadan",eidFitr:"Eid al-Fitr",eidAdha:"Eid al-Adha",
+quizTitle:"Islamic Quiz",quizSub:"Test your knowledge",
+nextQuestion:"Next Question",learningTitle:"Learning Corner",
+learningSub:"Learn Arabic and Urdu",arabicAlphabet:"Arabic Alphabet",
+startArabic:"Learn Arabic",urduWords:"Urdu Words",
+startUrdu:"Learn Urdu",practice:"Practice",practiceText:"Practise a little every day.",
+startPractice:"Start Practice",digitalLibrary:"Digital Library",
+librarySub:"PDF Books",arabicPdfText:"Arabic Alphabet Practice",
+urduPdfText:"Basic Urdu Vocabulary",adabPdfText:"Study and Adab Guide",
+openPdf:"Open",downloadPdf:"Download",libraryNotice:"Upload the PDF files to enable these links.",
+aiTitle:"AI Learning Assistant",aiSub:"Ask a study-related question",
+askAI:"Ask Question",aiNote:"This is a simple demo, not a live AI service.",
+admissionTitle:"Online Admission Form",admissionSub:"Fill in the details and send via WhatsApp",
+submitAdmission:"Send on WhatsApp",newsTitle:"Notice Board",
+newsSub:"Institution updates",newsSoon:"Coming soon",
+newsText:"New notices will be published here.",
+visitorTitle:"Visitor Information",visitorNote:"A real visitor total requires an analytics service.",
+donationTitle:"Donate and Support",donationText:"Support the institution's education and development.",
+donationHelp:"Your support helps children's education.",
+donationInstruction:"Scan the QR code to make a payment.",
+payNow:"Pay with UPI",receiptNote:"Please keep your payment receipt.",
+contactTitle:"Contact Us",contactSub:"Get in touch",
+footerText:"The path of knowledge, practice and good character.",
+adminTitle:"Admin Dashboard",adminNotice:"Demo only. Do not store private student information.",
+adminLogin:"Login",addNotice:"Add New Notice",
+publishNotice:"Publish Notice"
 },
-
-en:{
-brand:"Jamia Abubakar Siddique (RA)",
-navAbout:"About",navEducation:"Education",navAdmission:"Admission",navCalendar:"Islamic Date",navNews:"News",navDonate:"Donate",navContact:"Contact",
-tag:"The light of knowledge, towards a better tomorrow",
-title:"Jamia Abubakar Siddique (RA)",
-heroText:"An institution dedicated to children's education, character-building and good values through religious and foundational modern learning.",
-heroAdmission:"Admission information",heroDonate:"Support online",
-aboutTitle:"About Us",aboutText:"Jamia Abubakar Siddique (RA) aims to provide students with good education, discipline and strong values.",
-quote:"Knowledge helps a person grow; good character makes them shine.",
-educationTitle:"Our Education",educationIntro:"Building children's skills and confidence through religious and foundational modern education.",
-religiousTitle:"Religious Education",religiousText:"Qur'an, foundational Islamic studies and character development.",
-basicTitle:"Foundational Education",basicText:"Strengthening students' basic reading, writing and learning skills.",
-englishTitle:"English Education",englishText:"Opportunities to learn English and build confidence.",
-admissionTitle:"Admission",admissionIntro:"Fill in the details below. WhatsApp will open with a prepared message; you must send it yourself.",
-studentLabel:"Student name",guardianLabel:"Parent/guardian name",ageLabel:"Student age",
-courseLabel:"Class/course applying for",phoneLabel:"Parent/guardian mobile number",
-consentText:"I agree that these details may be sent to the madrasa on WhatsApp for admission follow-up.",
-submitLabel:"Send application on WhatsApp",formNote:"This form does not store information on the website. WhatsApp will open; you must send the message yourself.",
-calendarTitle:"🕌 Islamic Calendar",calendarIntro:"Today's Hijri date",
-moonNote:"The Hijri date may differ by one day according to local moon sighting.",
-newsTitle:"Madrasa News",newsIntro:"Announcements and programme updates from the madrasa will be published here.",
-newsSoon:"News coming soon",newsPlaceholder:"A dated news update will appear here when the madrasa provides an announcement.",
-donateTitle:"Support the Madrasa Online",donateText:"Your support can help the madrasa's educational activities and essential needs. May Allah reward you abundantly.",
-donateContact:"For donations/support, contact:",qrNote:"Before paying, verify that the recipient name shown in PhonePe is MD FIROZ ALAM.",
-contactTitle:"Contact Us",headLabel:"Mohtamim",headName:"Maulana Mohammad Firoz Alam Qasmi",
-addressLabel:"Address",address:"Kumra, Ward No. 3, Police Station Mahishi, District Saharsa, Bihar, India",
-mobileLabel:"Mobile",footer:"© Jamia Abubakar Siddique (RA) • All rights reserved"
+ur: {
+home:"صفحہ اول",about:"ہمارے بارے میں",education:"تعلیم",
+features:"خصوصیات",calendar:"ہجری کیلنڈر",library:"ڈیجیٹل لائبریری",
+admission:"داخلہ",donate:"عطیہ",contact:"رابطہ",
+heroTitle:"جامعہ ابوبکر صدیقؓ",
+heroText:"دینی اور عصری تعلیم کا خوبصورت امتزاج۔",
+admissionBtn:"داخلے کے لیے درخواست دیں",supportBtn:"عطیہ دیں",
+aboutTitle:"ہمارے بارے میں",aboutSub:"تعارف",
+missionTitle:"ہمارا مقصد",missionText:"بچوں کو معیاری دینی اور عصری تعلیم فراہم کرنا۔",
+missionText2:"علم، عمل اور اچھے اخلاق کو فروغ دینا۔",
+infoTitle:"ادارے کی معلومات",nameLabel:"ادارے کا نام",
+mohtamimLabel:"مہتمم",addressLabel:"پتہ",phoneLabel:"موبائل",
+educationTitle:"ہماری تعلیم",educationSub:"بچوں کے لیے تعلیم",
+deenTitle:"دینی تعلیم",deenText:"قرآن، حدیث اور اسلامی تعلیمات۔",
+languageTitle:"زبان کی تعلیم",languageText:"عربی، اردو اور انگریزی۔",
+modernTitle:"عصری تعلیم",modernText:"بنیادی عصری مضامین۔",
+akhlaqTitle:"اخلاق",akhlaqText:"اچھے اخلاق اور نظم و ضبط کی تعلیم۔",
+featureTitle:"ہماری سہولیات",featureSub:"تعلیم کے لیے مفید سہولیات",
+calendarFeature:"ہجری کیلنڈر",calendarFeatureText:"اسلامی تاریخ اور تہوار۔",
+libraryFeature:"ڈیجیٹل لائبریری",libraryFeatureText:"تعلیمی مواد اور PDF۔",
+admissionFeature:"آن لائن داخلہ",admissionFeatureText:"آن لائن درخواست کی سہولت۔",
+aiFeature:"تعلیمی معاون",aiFeatureText:"پڑھائی میں مدد دینے والا ڈیمو۔",
+hijriTitle:"ہجری کیلنڈر",hijriSub:"آج کی اسلامی تاریخ",
+todayHijri:"آج کی تاریخ",upcomingEvents:"آنے والے تہوار",
+moonNote:"چاند نظر آنے کے مطابق تاریخ مختلف ہو سکتی ہے۔",
+quranTitle:"آج کی قرآنی آیت",quranSub:"قرآن سے سیکھیں",
+nextAyat:"اگلی آیت",prayerTitle:"نماز کے اوقات",
+prayerSub:"مقامی اوقات یہاں درج کریں",
+fajr:"فجر",zuhr:"ظہر",asr:"عصر",maghrib:"مغرب",
+isha:"عشاء",jummah:"جمعہ",prayerNotice:"مقامی تصدیق شدہ اوقات درج کریں۔",
+eventTitle:"اسلامی تہوار",eventSub:"اندازاً باقی وقت",
+ramadan:"رمضان",eidFitr:"عید الفطر",eidAdha:"عید الاضحی",
+quizTitle:"اسلامی کوئز",quizSub:"اپنا علم آزمائیں",
+nextQuestion:"اگلا سوال",learningTitle:"تعلیمی گوشہ",
+learningSub:"عربی اور اردو سیکھیں",arabicAlphabet:"عربی حروف",
+startArabic:"عربی سیکھیں",urduWords:"اردو الفاظ",
+startUrdu:"اردو سیکھیں",practice:"مشق",practiceText:"روزانہ تھوڑی مشق کریں۔",
+startPractice:"مشق شروع کریں",digitalLibrary:"ڈیجیٹل لائبریری",
+librarySub:"PDF کتابیں",arabicPdfText:"عربی حروف کی مشق",
+urduPdfText:"بنیادی اردو الفاظ",adabPdfText:"مطالعہ اور آداب کی رہنما کتاب",
+openPdf:"کھولیں",downloadPdf:"ڈاؤن لوڈ",libraryNotice:"PDF فائلیں اپ لوڈ کریں۔",
+aiTitle:"تعلیمی معاون",aiSub:"تعلیم سے متعلق سوال پوچھیں",
+askAI:"سوال پوچھیں",aiNote:"یہ صرف ایک سادہ ڈیمو ہے، حقیقی AI سروس نہیں۔",
+admissionTitle:"آن لائن داخلہ فارم",admissionSub:"معلومات درج کرکے واٹس ایپ پر بھیجیں",
+submitAdmission:"واٹس ایپ پر بھیجیں",newsTitle:"اطلاع نامہ",
+newsSub:"ادارے کی خبریں",newsSoon:"جلد اپ ڈیٹ ہوگا",
+newsText:"نئے اعلانات یہاں شائع ہوں گے۔",
+visitorTitle:"وزیٹر کی معلومات",visitorNote:"حقیقی تعداد کے لیے اینالیٹکس سروس درکار ہے۔",
+donationTitle:"عطیہ اور تعاون",donationText:"ادارے کی تعلیم اور ترقی میں تعاون کریں۔",
+donationHelp:"آپ کا تعاون بچوں کی تعلیم میں مددگار ہوگا۔",
+donationInstruction:"ادائیگی کے لیے QR کوڈ اسکین کریں۔",
+payNow:"UPI سے ادائیگی",receiptNote:"ادائیگی کی رسید محفوظ رکھیں۔",
+contactTitle:"رابطہ کریں",contactSub:"ہم سے رابطہ کریں",
+footerText:"علم، عمل اور اخلاق کا راستہ۔",
+adminTitle:"ایڈمن ڈیش بورڈ",adminNotice:"یہ ڈیمو ہے۔ طلبہ کی نجی معلومات محفوظ نہ کریں۔",
+adminLogin:"لاگ اِن",addNotice:"نیا اعلان شامل کریں",
+publishNotice:"اعلان شائع کریں"
 }
 };
 
-function setLanguage(lang){
-const dict=translations[lang]||translations.hi;
-document.documentElement.lang=lang;
-document.documentElement.dir=lang==="ur"?"rtl":"ltr";
-document.querySelectorAll("[data-i]").forEach(el=>{
-const key=el.getAttribute("data-i");
-if(dict[key]!==undefined)el.textContent=dict[key];
-});
-document.querySelectorAll("[data-lang]").forEach(btn=>{
-btn.classList.toggle("active",btn.dataset.lang===lang);
-});
-updateIslamicDate(lang);
+function setLanguage(lang) {
+  const dict = translations[lang] || translations.hi;
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === "ur" ? "rtl" : "ltr";
+  document.querySelectorAll("[data-i]").forEach(el => {
+    const key = el.getAttribute("data-i");
+    if (dict[key]) el.textContent = dict[key];
+  });
+  localStorage.setItem("jamiaLanguage", lang);
+}
+window.setLanguage = setLanguage;
+
+/* MOBILE MENU */
+function toggleMenu() {
+  const nav = document.querySelector("nav");
+  if (nav) nav.classList.toggle("active");
+}
+window.toggleMenu = toggleMenu;
+
+/* ADMISSION FORM: SENDS TO WHATSAPP */
+const admissionForm = document.getElementById("admissionForm");
+if (admissionForm) {
+  admissionForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const f = new FormData(admissionForm);
+    const message =
+      "Jamia Abubakar Siddique (RA) - Admission Application\n" +
+      "Student: " + f.get("student") + "\n" +
+      "Guardian: " + f.get("guardian") + "\n" +
+      "Age: " + f.get("age") + "\n" +
+      "Phone: " + f.get("phone") + "\n" +
+      "Course: " + f.get("course");
+    window.open(
+      "https://wa.me/919681035071?text=" + encodeURIComponent(message),
+      "_blank"
+    );
+  });
 }
 
-document.querySelectorAll("[data-lang]").forEach(btn=>{
-btn.addEventListener("click",()=>setLanguage(btn.dataset.lang));
-});
-
-function updateIslamicDate(lang){
-const locale=lang==="ur"?"ur-PK":lang==="en"?"en-GB":"hi-IN";
-const now=new Date();
-try{
-document.getElementById("hijriDate").textContent=
-new Intl.DateTimeFormat(locale+"-u-ca-islamic-umalqura",{
-day:"numeric",month:"long",year:"numeric"
-}).format(now);
-}catch(error){
-document.getElementById("hijriDate").textContent=
-new Intl.DateTimeFormat("en-u-ca-islamic-umalqura",{
-day:"numeric",month:"long",year:"numeric"
-}).format(now);
-}
-document.getElementById("englishDate").textContent=
-now.toLocaleDateString(locale,{day:"numeric",month:"long",year:"numeric"});
-}
-
-document.getElementById("year").textContent=new Date().getFullYear();
-updateIslamicDate("hi");
-
-document.getElementById("admissionForm").addEventListener("submit",function(event){
-event.preventDefault();
-if(!document.getElementById("consent").checked)return;
-
-const fields=new FormData(this);
-const lang=document.documentElement.lang;
-const labels=lang==="en"
-?["Student","Guardian","Age","Class/course","Phone"]
-:lang==="ur"
-?["طالب علم","سرپرست","عمر","جماعت/کورس","موبائل"]
-:["विद्यार्थी","अभिभावक","उम्र","कक्षा/कोर्स","मोबाइल"];
-
-const values=["student","guardian","age","course","phone"].map(k=>fields.get(k)||"");
-const message="Admission enquiry - Jamia Abubakar Siddique (RA)\n"+
-labels.map((label,i)=>label+": "+values[i]).join("\n");
-
-window.open(
-"https://wa.me/919681035071?text="+encodeURIComponent(message),
-"_blank"
-);
-});
-// DAILY QURAN AYAT
-const quranAyats = [
- {
-  arabic:"بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
-  reference:"Surah Al-Fatiha 1:1",
-  meaning:"Allah ke naam se, jo nihayat meherban aur raham karne wala hai."
- },
- {
-  arabic:"إِنَّ مَعَ الْعُسْرِ يُسْرًا",
-  reference:"Surah Ash-Sharh 94:6",
-  meaning:"Beshak mushkil ke saath aasani hai."
- },
- {
-  arabic:"وَقُل رَّبِّ زِدْنِي عِلْمًا",
-  reference:"Surah Taha 20:114",
-  meaning:"Aur kahiye: Ae mere Rab, mere ilm mein izafa farma."
- },
- {
-  arabic:"فَاذْكُرُونِي أَذْكُرْكُمْ",
-  reference:"Surah Al-Baqarah 2:152",
-  meaning:"Tum Mujhe yaad karo, Main tumhe yaad karunga."
- }
+/* QURAN AYAT DISPLAY */
+const ayatList = [
+  {
+    arabic:"وَقُل رَّبِّ زِدْنِي عِلْمًا",
+    meaning:"और कहिए: ऐ मेरे रब! मेरे ज्ञान में वृद्धि कर।",
+    reference:"सूरह ताहा 20:114"
+  },
+  {
+    arabic:"فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
+    meaning:"बेशक कठिनाई के साथ आसानी है।",
+    reference:"सूरह अश-शरह 94:5"
+  },
+  {
+    arabic:"إِنَّ اللَّهَ مَعَ الصَّابِرِينَ",
+    meaning:"बेशक अल्लाह सब्र करने वालों के साथ है।",
+    reference:"सूरह अल-बक़रह 2:153"
+  }
 ];
-
-function showAyat(){
- const day=Math.floor(Date.now()/86400000);
- const ayat=quranAyats[day%quranAyats.length];
- document.getElementById("quranArabic").textContent=ayat.arabic;
- document.getElementById("quranReference").textContent=ayat.reference;
- document.getElementById("quranMeaning").textContent=ayat.meaning;
+let ayatIndex = 0;
+function nextAyat() {
+  const a = ayatList[ayatIndex];
+  document.getElementById("quranArabic").textContent = a.arabic;
+  document.getElementById("quranMeaning").textContent = a.meaning;
+  document.getElementById("quranReference").textContent = a.reference;
+  ayatIndex = (ayatIndex + 1) % ayatList.length;
 }
+window.nextAyat = nextAyat;
+nextAyat();
 
-function nextAyat(){
- const current=quranAyats.findIndex(a=>
- a.reference===document.getElementById("quranReference").textContent);
- const next=quranAyats[(current+1)%quranAyats.length];
- document.getElementById("quranArabic").textContent=next.arabic;
- document.getElementById("quranReference").textContent=next.reference;
- document.getElementById("quranMeaning").textContent=next.meaning;
+/* HIJRI DATE - APPROXIMATE */
+try {
+  const hijri = new Intl.DateTimeFormat(
+    "en-u-ca-islamic-umalqura",
+    {day:"numeric",month:"long",year:"numeric"}
+  ).format(new Date());
+  const h = document.getElementById("hijriDate");
+  if (h) h.textContent = hijri;
+} catch(e) {
+  const h = document.getElementById("hijriDate");
+  if (h) h.textContent = "Hijri date unavailable";
 }
-showAyat();
+const g = document.getElementById("gregDate");
+if (g) g.textContent = new Date().toLocaleDateString();
 
-
-// ISLAMIC EVENT COUNTDOWN
-function getHijriParts(date){
- const parts=new Intl.DateTimeFormat(
- "en-u-ca-islamic-umalqura-nu-latn",
- {day:"numeric",month:"numeric",year:"numeric"}
- ).formatToParts(date);
- const result={};
- parts.forEach(p=>result[p.type]=Number(p.value));
- return result;
+/* COUNTDOWN: ESTIMATED GREGORIAN DATES.
+   Update these dates after checking a reliable local calendar. */
+function countdown(id, target) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const now = new Date();
+  const diff = new Date(target + "T00:00:00") - now;
+  if (diff <= 0) {
+    el.textContent = "Date passed / update date";
+    return;
+  }
+  const days = Math.ceil(diff / 86400000);
+  el.textContent = days + " days remaining (estimated)";
 }
+countdown("ramadanCountdown", "2027-02-08");
+countdown("fitrCountdown", "2027-03-10");
+countdown("adhaCountdown", "2027-05-17");
 
-function findHijriEvent(month,day){
- const now=new Date();
- now.setHours(0,0,0,0);
- for(let i=0;i<=400;i++){
-  const date=new Date(now);
-  date.setDate(date.getDate()+i);
-  const h=getHijriParts(date);
-  if(h.month===month && h.day===day) return date;
- }
- return null;
-}
-
-function countdownText(date){
- if(!date)return "Date unavailable";
- const today=new Date();
- today.setHours(0,0,0,0);
- const days=Math.ceil((date-today)/86400000);
- return days===0?"Today!":days+" days remaining";
-}
-
-function updateIslamicEvents(){
- document.getElementById("ramadanCountdown").textContent=
- countdownText(findHijriEvent(9,1));
- document.getElementById("eidCountdown").textContent=
- countdownText(findHijriEvent(10,1));
- document.getElementById("adhaCountdown").textContent=
- countdownText(findHijriEvent(12,10));
-}
-updateIslamicEvents();
-
-
-// ISLAMIC QUIZ
-const islamicQuestions=[
- {
-  question:"Islam ka pehla mahina kaunsa hai?",
-  options:["Ramadan","Muharram","Rajab","Safar"],
-  answer:1
- },
- {
-  question:"Quran Majeed kis Nabi par nazil hua?",
-  options:["Hazrat Musa (AS)","Hazrat Isa (AS)","Hazrat Muhammad (SAW)","Hazrat Ibrahim (AS)"],
-  answer:2
- },
- {
-  question:"Islam ke kitne pillars hain?",
-  options:["3","4","5","6"],
-  answer:2
- },
- {
-  question:"Quran Majeed mein kitni Surah hain?",
-  options:["110","112","114","116"],
-  answer:2
- },
- {
-  question:"Muslim kis taraf rukh karke namaz padhte hain?",
-  options:["Masjid-e-Nabawi","Kaaba","Masjid-e-Aqsa","Kisi bhi taraf"],
-  answer:1
- }
+/* ISLAMIC QUIZ */
+const quiz = [
+  {q:"قرآن मजीद किस भाषा में नाज़िल हुआ?",o:["अरबी","उर्दू","फारसी"],a:0},
+  {q:"एक दिन में कितनी फ़र्ज़ नमाज़ें हैं?",o:["तीन","पाँच","सात"],a:1},
+  {q:"कुरआन की पहली सूरह कौन सी है?",o:["अल-फातिहा","अल-इखलास","अन-नास"],a:0},
+  {q:"रमज़ान के महीने में कौन सा रोज़ा रखा जाता है?",o:["फ़र्ज़","नफ़्ल","क़ज़ा"],a:0}
 ];
+let quizIndex = 0;
+let quizScore = 0;
+let answered = false;
 
-let quizIndex=0;
-let quizScore=0;
-let quizAnswered=false;
-
-function loadQuiz(){
- const q=islamicQuestions[quizIndex];
- document.getElementById("quizQuestion").textContent=q.question;
- document.getElementById("quizResult").textContent="";
- document.getElementById("quizOptions").innerHTML="";
- quizAnswered=false;
-
- q.options.forEach((option,index)=>{
-  const btn=document.createElement("button");
-  btn.className="btn";
-  btn.style.display="block";
-  btn.style.width="100%";
-  btn.style.margin="8px 0";
-  btn.textContent=option;
-  btn.onclick=()=>checkQuiz(index);
-  document.getElementById("quizOptions").appendChild(btn);
- });
+function showQuestion() {
+  const item = quiz[quizIndex];
+  document.getElementById("quizQuestion").textContent = item.q;
+  const box = document.getElementById("quizOptions");
+  box.innerHTML = "";
+  item.o.forEach((option,index) => {
+    const btn = document.createElement("button");
+    btn.textContent = option;
+    btn.style.margin = "5px";
+    btn.onclick = () => {
+      if (answered) return;
+      answered = true;
+      if (index === item.a) {
+        quizScore++;
+        document.getElementById("quizFeedback").textContent = "सही जवाब!";
+      } else {
+        document.getElementById("quizFeedback").textContent =
+          "सही जवाब: " + item.o[item.a];
+      }
+      document.getElementById("quizScore").textContent =
+        "Score: " + quizScore;
+    };
+    box.appendChild(btn);
+  });
+  document.getElementById("quizFeedback").textContent = "";
 }
-
-function checkQuiz(selected){
- if(quizAnswered)return;
- quizAnswered=true;
- const correct=islamicQuestions[quizIndex].answer;
- if(selected===correct){
-  quizScore++;
-  document.getElementById("quizResult").textContent="Mashallah! Sahi jawab 🎉";
- }else{
-  document.getElementById("quizResult").textContent=
-  "Sahi jawab: "+islamicQuestions[quizIndex].options[correct];
- }
- document.getElementById("quizScore").textContent="Score: "+quizScore;
+function nextQuestion() {
+  quizIndex = (quizIndex + 1) % quiz.length;
+  answered = false;
+  showQuestion();
 }
+window.nextQuestion = nextQuestion;
+showQuestion();
 
-function nextQuiz(){
- quizIndex=(quizIndex+1)%islamicQuestions.length;
- if(quizIndex===0)quizScore=0;
- document.getElementById("quizScore").textContent="Score: "+quizScore;
- loadQuiz();
+/* BASIC LEARNING LESSONS */
+function showLesson(type) {
+  const output = document.getElementById("lessonOutput");
+  if (!output) return;
+  const lessons = {
+    arabic:"ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن و ه لا ي",
+    urdu:"کتاب = Book | پانی = Water | قلم = Pen | علم = Knowledge",
+    practice:"آج کا سبق: بسم اللہ پڑھ کر اپنی کتاب سے دس منٹ مطالعہ کریں۔"
+  };
+  output.textContent = lessons[type] || "Lesson coming soon.";
 }
-loadQuiz();
-  
-<div class="counterapi"
-     key="website-visits"
-     style="min-height:44px">
-</div>
+window.showLesson = showLesson;
 
-
-// URDU & ARABIC LEARNING
-function showLearning(type) {
-  const box = document.getElementById("learningContent");
-
-  if (type === "arabic") {
-    box.innerHTML = `
-      <h3>Arabic Alphabet – حروف الهجاء</h3>
-      <p style="font-size:30px;line-height:2;direction:rtl">
-        ا ب ت ث ج ح خ د ذ ر ز<br>
-        س ش ص ض ط ظ ع غ ف ق<br>
-        ك ل م ن ه و ي
-      </p>
-      <p>Practice reading each letter aloud.</p>
-      <p><b>Example:</b> ا – Alif, ب – Baa, ت – Taa</p>
-    `;
+/* SIMPLE RULE-BASED LEARNING ASSISTANT - NOT REAL AI */
+function askLearningAssistant() {
+  const q = (document.getElementById("aiQuestion")?.value || "").toLowerCase();
+  const output = document.getElementById("aiAnswer");
+  if (!output) return;
+  let answer = "यह एक demo assistant है। अभी यह सीमित सवालों के जवाब दे सकता है। अपने शिक्षक से भी पुष्टि करें।";
+  if (q.includes("arabic") || q.includes("अरबी")) {
+    answer = "अरबी सीखने के लिए पहले अक्षर पहचानें, फिर हर रोज़ पढ़ने का अभ्यास करें।";
+  } else if (q.includes("urdu") || q.includes("उर्दू")) {
+    answer = "उर्दू सीखने के लिए रोज़ पाँच नए शब्द लिखें और उन्हें वाक्यों में इस्तेमाल करें।";
+  } else if (q.includes("quran") || q.includes("कुरआन")) {
+    answer = "कुरआन पढ़ते समय सही उच्चारण और तजवीद के लिए योग्य शिक्षक से सीखें।";
+  } else if (q.includes("namaz") || q.includes("नमाज़")) {
+    answer = "नमाज़ के सही तरीके और मसाइल अपने योग्य उस्ताद से सीखें।";
+  } else if (q.includes("english") || q.includes("अंग्रेज़ी")) {
+    answer = "रोज़ पाँच अंग्रेज़ी शब्द सीखें और छोटे वाक्य बनाकर अभ्यास करें।";
   }
-
-  else if (type === "urdu") {
-    box.innerHTML = `
-      <h3>Urdu – بنیادی الفاظ</h3>
-      <p style="font-size:25px;direction:rtl">
-        کتاب – Kitab<br>
-        پانی – Pani<br>
-        علم – Ilm<br>
-        مدرسہ – Madrasa<br>
-        سلام – Salam
-      </p>
-      <p>Practice reading and speaking these words.</p>
-    `;
-  }
-
-  else if (type === "quiz") {
-    box.innerHTML = `
-      <h3>Arabic Practice Quiz</h3>
-      <p>Which letter is called Alif?</p>
-      <button class="btn" onclick="checkLearningQuiz('ا')">ا</button>
-      <button class="btn" onclick="checkLearningQuiz('ب')">ب</button>
-      <button class="btn" onclick="checkLearningQuiz('ت')">ت</button>
-      <p id="learningQuizResult"></p>
-    `;
-  }
+  output.textContent = answer;
 }
+window.askLearningAssistant = askLearningAssistant;
 
-function checkLearningQuiz(answer) {
-  const result = document.getElementById("learningQuizResult");
-
-  if (answer === "ا") {
-    result.textContent = "Correct! MashaAllah 🎉";
+/* DEMO ADMIN DASHBOARD
+   PIN 1234 is not secure. Notices stay only in this browser. */
+function adminLogin() {
+  if (document.getElementById("adminPin").value === "1234") {
+    document.getElementById("adminPanel").classList.remove("hidden");
+    renderNotices();
   } else {
-    result.textContent = "Try again! The correct answer is ا";
+    alert("Incorrect demo PIN");
   }
 }
-  
-</script><script src="https://counterapi.com/c.js?ns=jamia-abubakar-siddique" async></script>
-</body>
-</html>
+window.adminLogin = adminLogin;
 
+function getNotices() {
+  try {
+    return JSON.parse(localStorage.getItem("jamiaDemoNotices") || "[]");
+  } catch(e) { return []; }
+}
+function addNotice() {
+  const heading = document.getElementById("noticeHeading").value.trim();
+  const body = document.getElementById("noticeBody").value.trim();
+  if (!heading || !body) {
+    alert("Please enter both heading and details.");
+    return;
+  }
+  const notices = getNotices();
+  notices.unshift({heading,body});
+  localStorage.setItem("jamiaDemoNotices", JSON.stringify(notices));
+  document.getElementById("noticeHeading").value = "";
+  document.getElementById("noticeBody").value = "";
+  renderNotices();
+}
+window.addNotice = addNotice;
+
+function renderNotices() {
+  const box = document.getElementById("adminNoticeList");
+  if (!box) return;
+  box.innerHTML = "";
+  getNotices().forEach((notice,index) => {
+    const item = document.createElement("div");
+    item.className = "admin-notice";
+    const heading = document.createElement("strong");
+    heading.textContent = notice.heading;
+    co
+  
+  
