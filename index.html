@@ -149,6 +149,72 @@ section{padding:42px 0}
 </div>
 </section>
 
+<!-- DAILY QURAN AYAT -->
+<section id="daily-quran">
+  <div class="container">
+    <h2 class="section-title">📖 Daily Quran Ayat</h2>
+    <div class="card news-card">
+      <h2 id="quranArabic" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</h2>
+      <h3 id="quranReference">Surah Al-Fatiha</h3>
+      <p id="quranMeaning">Allah ke naam se, jo nihayat meherban aur raham karne wala hai.</p>
+      <button class="btn" onclick="nextAyat()">Next Ayat</button>
+    </div>
+  </div>
+</section>
+
+<!-- NAMAZ TIMING BOARD -->
+<section id="prayer-times">
+  <div class="container">
+    <h2 class="section-title">🕌 Namaz Timing Board</h2>
+    <p class="intro">Daily Prayer Schedule</p>
+    <div class="cards">
+      <div class="card"><h3>Fajr</h3><p>05:00 AM</p></div>
+      <div class="card"><h3>Zuhr</h3><p>12:15 PM</p></div>
+      <div class="card"><h3>Asr</h3><p>03:45 PM</p></div>
+      <div class="card"><h3>Maghrib</h3><p>05:00 PM</p></div>
+      <div class="card"><h3>Isha</h3><p>06:30 PM</p></div>
+      <div class="card"><h3>Jummah</h3><p>01:00 PM</p></div>
+    </div>
+    <p class="small">Namaz timings are sample values. Please confirm and update according to your local masjid timetable.</p>
+  </div>
+</section>
+
+<!-- ISLAMIC EVENT COUNTDOWN -->
+<section id="islamic-events">
+  <div class="container">
+    <h2 class="section-title">🌙 Islamic Events Countdown</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Ramadan</h3>
+        <p id="ramadanCountdown">Calculating...</p>
+      </div>
+      <div class="card">
+        <h3>Eid-ul-Fitr</h3>
+        <p id="eidCountdown">Calculating...</p>
+      </div>
+      <div class="card">
+        <h3>Eid-ul-Adha</h3>
+        <p id="adhaCountdown">Calculating...</p>
+      </div>
+    </div>
+    <p class="small">Dates are estimated using the Umm al-Qura calendar and may differ with local moon sighting.</p>
+  </div>
+</section>
+
+<!-- ISLAMIC QUIZ -->
+<section id="islamic-quiz">
+  <div class="container">
+    <h2 class="section-title">🧠 Islamic Quiz</h2>
+    <div class="card news-card">
+      <h3 id="quizQuestion">Islam ka pehla mahina kaunsa hai?</h3>
+      <div id="quizOptions"></div>
+      <p id="quizResult"></p>
+      <p id="quizScore">Score: 0</p>
+      <button class="btn" onclick="nextQuiz()">Next Question</button>
+    </div>
+  </div>
+</section>
+  
 <section id="news">
 <div class="container">
 <h2 class="section-title" data-i="newsTitle">मदरसे की खबरें</h2>
@@ -339,6 +405,165 @@ window.open(
 "_blank"
 );
 });
+// DAILY QURAN AYAT
+const quranAyats = [
+ {
+  arabic:"بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+  reference:"Surah Al-Fatiha 1:1",
+  meaning:"Allah ke naam se, jo nihayat meherban aur raham karne wala hai."
+ },
+ {
+  arabic:"إِنَّ مَعَ الْعُسْرِ يُسْرًا",
+  reference:"Surah Ash-Sharh 94:6",
+  meaning:"Beshak mushkil ke saath aasani hai."
+ },
+ {
+  arabic:"وَقُل رَّبِّ زِدْنِي عِلْمًا",
+  reference:"Surah Taha 20:114",
+  meaning:"Aur kahiye: Ae mere Rab, mere ilm mein izafa farma."
+ },
+ {
+  arabic:"فَاذْكُرُونِي أَذْكُرْكُمْ",
+  reference:"Surah Al-Baqarah 2:152",
+  meaning:"Tum Mujhe yaad karo, Main tumhe yaad karunga."
+ }
+];
+
+function showAyat(){
+ const day=Math.floor(Date.now()/86400000);
+ const ayat=quranAyats[day%quranAyats.length];
+ document.getElementById("quranArabic").textContent=ayat.arabic;
+ document.getElementById("quranReference").textContent=ayat.reference;
+ document.getElementById("quranMeaning").textContent=ayat.meaning;
+}
+
+function nextAyat(){
+ const current=quranAyats.findIndex(a=>
+ a.reference===document.getElementById("quranReference").textContent);
+ const next=quranAyats[(current+1)%quranAyats.length];
+ document.getElementById("quranArabic").textContent=next.arabic;
+ document.getElementById("quranReference").textContent=next.reference;
+ document.getElementById("quranMeaning").textContent=next.meaning;
+}
+showAyat();
+
+
+// ISLAMIC EVENT COUNTDOWN
+function getHijriParts(date){
+ const parts=new Intl.DateTimeFormat(
+ "en-u-ca-islamic-umalqura-nu-latn",
+ {day:"numeric",month:"numeric",year:"numeric"}
+ ).formatToParts(date);
+ const result={};
+ parts.forEach(p=>result[p.type]=Number(p.value));
+ return result;
+}
+
+function findHijriEvent(month,day){
+ const now=new Date();
+ now.setHours(0,0,0,0);
+ for(let i=0;i<=400;i++){
+  const date=new Date(now);
+  date.setDate(date.getDate()+i);
+  const h=getHijriParts(date);
+  if(h.month===month && h.day===day) return date;
+ }
+ return null;
+}
+
+function countdownText(date){
+ if(!date)return "Date unavailable";
+ const today=new Date();
+ today.setHours(0,0,0,0);
+ const days=Math.ceil((date-today)/86400000);
+ return days===0?"Today!":days+" days remaining";
+}
+
+function updateIslamicEvents(){
+ document.getElementById("ramadanCountdown").textContent=
+ countdownText(findHijriEvent(9,1));
+ document.getElementById("eidCountdown").textContent=
+ countdownText(findHijriEvent(10,1));
+ document.getElementById("adhaCountdown").textContent=
+ countdownText(findHijriEvent(12,10));
+}
+updateIslamicEvents();
+
+
+// ISLAMIC QUIZ
+const islamicQuestions=[
+ {
+  question:"Islam ka pehla mahina kaunsa hai?",
+  options:["Ramadan","Muharram","Rajab","Safar"],
+  answer:1
+ },
+ {
+  question:"Quran Majeed kis Nabi par nazil hua?",
+  options:["Hazrat Musa (AS)","Hazrat Isa (AS)","Hazrat Muhammad (SAW)","Hazrat Ibrahim (AS)"],
+  answer:2
+ },
+ {
+  question:"Islam ke kitne pillars hain?",
+  options:["3","4","5","6"],
+  answer:2
+ },
+ {
+  question:"Quran Majeed mein kitni Surah hain?",
+  options:["110","112","114","116"],
+  answer:2
+ },
+ {
+  question:"Muslim kis taraf rukh karke namaz padhte hain?",
+  options:["Masjid-e-Nabawi","Kaaba","Masjid-e-Aqsa","Kisi bhi taraf"],
+  answer:1
+ }
+];
+
+let quizIndex=0;
+let quizScore=0;
+let quizAnswered=false;
+
+function loadQuiz(){
+ const q=islamicQuestions[quizIndex];
+ document.getElementById("quizQuestion").textContent=q.question;
+ document.getElementById("quizResult").textContent="";
+ document.getElementById("quizOptions").innerHTML="";
+ quizAnswered=false;
+
+ q.options.forEach((option,index)=>{
+  const btn=document.createElement("button");
+  btn.className="btn";
+  btn.style.display="block";
+  btn.style.width="100%";
+  btn.style.margin="8px 0";
+  btn.textContent=option;
+  btn.onclick=()=>checkQuiz(index);
+  document.getElementById("quizOptions").appendChild(btn);
+ });
+}
+
+function checkQuiz(selected){
+ if(quizAnswered)return;
+ quizAnswered=true;
+ const correct=islamicQuestions[quizIndex].answer;
+ if(selected===correct){
+  quizScore++;
+  document.getElementById("quizResult").textContent="Mashallah! Sahi jawab 🎉";
+ }else{
+  document.getElementById("quizResult").textContent=
+  "Sahi jawab: "+islamicQuestions[quizIndex].options[correct];
+ }
+ document.getElementById("quizScore").textContent="Score: "+quizScore;
+}
+
+function nextQuiz(){
+ quizIndex=(quizIndex+1)%islamicQuestions.length;
+ if(quizIndex===0)quizScore=0;
+ document.getElementById("quizScore").textContent="Score: "+quizScore;
+ loadQuiz();
+}
+loadQuiz();
+  
 </script>
 </body>
 </html>
