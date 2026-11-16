@@ -128,48 +128,67 @@ display:none;margin:auto">
 </section>
 
 <style>
-#jamia-id-maker {
-  max-width: 500px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 2px solid #176b50;
-  border-radius: 12px;
-  font-family: Arial, sans-serif;
-}
-#jamia-id-maker h2 {
-  color: #176b50;
-  text-align: center;
-}
-#jamia-id-maker label {
-  display: block;
-  margin-top: 12px;
-  font-weight: bold;
-}
-#jamia-id-maker input {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 11px;
-  margin-top: 5px;
-  border: 1px solid #aaa;
-  border-radius: 6px;
-}
-#jamia-id-maker button {
-  margin-top: 15px;
-  padding: 11px 16px;
-  background: #176b50;
-  color: white;
-  border: 0;
-  border-radius: 6px;
-}
+
 #jamiaCard {
-  margin-top: 20px;
+  width: 320px;
+  max-width: 100%;
+  margin: 20px auto;
   padding: 18px;
-  border: 3px solid #176b50;
-  border-radius: 12px;
-  background: #fff;
-  color: #222;
+  box-sizing: border-box;
+  border: 3px solid #d6ad45;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #064e3b, #087e68, #123b72);
+  color: white;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 8px 25px rgba(0,0,0,.25);
+  position: relative;
+  overflow: hidden;
 }
-#jamiaCard h3 { text-align: center; }
+
+#jamiaCard h2 {
+  color: #ffe29a;
+  font-size: 19px;
+  text-align: center;
+  margin: 5px 0;
+}
+
+#jamiaCard h3 {
+  color: #fff2c2;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #d6ad45;
+  padding-bottom: 10px;
+}
+
+#jamiaCard p {
+  background: rgba(255,255,255,.12);
+  padding: 7px 9px;
+  border-radius: 7px;
+  font-size: 13px;
+  margin: 7px 0;
+}
+
+#jamiaCard img {
+  display: block;
+  width: 105px !important;
+  height: 125px !important;
+  object-fit: cover;
+  border: 3px solid #f4d47d !important;
+  border-radius: 12px !important;
+  margin: 12px auto !important;
+}
+
+#jamia-id-maker button {
+  background: linear-gradient(90deg,#087e68,#123b72);
+  color: white;
+  border: 2px solid #d6ad45;
+  border-radius: 9px;
+  padding: 11px 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 @media print {
   body * { visibility: hidden; }
   #jamiaCard, #jamiaCard * { visibility: visible; }
@@ -178,9 +197,12 @@ display:none;margin:auto">
     left: 0;
     top: 0;
     width: 85mm;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
   }
   #jamiaCard button { display: none; }
 }
+ 
 </style>
 
 <script>
