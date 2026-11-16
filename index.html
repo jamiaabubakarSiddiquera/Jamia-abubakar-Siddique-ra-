@@ -81,7 +81,18 @@ try{setLang(localStorage.getItem('jamiaLang')||'hi')}catch(e){setLang('hi')}
 
   <label>Student Name</label>
   <input id="jamiaName" placeholder="Student name">
+<label>Student Photo</label>
+<input type="file" id="jamiaPhotoUpload" accept="image/*">
 
+<button type="button" onclick="jamiaStartCamera()">📷 Open Camera</button>
+
+<div id="jamiaCameraBox" style="display:none">
+  <video id="jamiaVideo" autoplay playsinline
+    style="width:100%;max-width:250px"></video>
+  <br>
+  <button type="button" onclick="jamiaCapturePhoto()">Take Photo</button>
+  <button type="button" onclick="jamiaStopCamera()">Close Camera</button>
+</div>
   <label>Father's Name</label>
   <input id="jamiaFather" placeholder="Father's name">
 
@@ -100,6 +111,11 @@ try{setLang(localStorage.getItem('jamiaLang')||'hi')}catch(e){setLang('hi')}
     <hr>
     <h2>JAMIA ABUBAKAR SIDDIQUE (RA)</h2>
     <h3>STUDENT IDENTITY CARD</h3>
+   <img id="jamiaCardPhoto"
+src=""
+style="width:100px;height:120px;object-fit:cover;
+border:2px solid #176b50;border-radius:8px;
+display:none;margin:auto">
     <p><b>ID No:</b> <span id="jamiaCardId"></span></p>
     <p><b>Name:</b> <span id="jamiaCardName"></span></p>
     <p><b>Father:</b> <span id="jamiaCardFather"></span></p>
@@ -168,7 +184,12 @@ try{setLang(localStorage.getItem('jamiaLang')||'hi')}catch(e){setLang('hi')}
 </style>
 
 <script>
-function jamiaGenerate() {
+function jamiaGenerate() {if (jamiaPhotoData) {
+  jamiaShowPhoto();
+} else {
+  alert("Student ki photo upload ya capture karo!");
+  return;
+}
   const name = document.getElementById("jamiaName").value.trim();
   if (!name) {
     alert("Student name likho!");
@@ -197,5 +218,76 @@ function jamiaGenerate() {
 
   localStorage.setItem("jamiaNextStudentId", next + 1);
 }
-</script>
+let jamiaCameraStream = null;
+let jamiaPhotoData = "";
+
+document.getElementById("jamiaPhotoUpload")
+.addEventListener("change", function(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  if (!file.type.startsWith("image/")) {
+    alert("Please select an image!");
+    return;
+  }
+
+  if (file.size > 5 * 1024 * 1024) {
+    alert("Photo 5 MB se chhoti honi chahiye!");
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = function() {
+    jamiaPhotoData = reader.result;
+    jamiaShowPhoto();
+  };
+  reader.readAsDataURL(file);
+});
+
+function jamiaShowPhoto() {
+  const img = document.getElementById("jamiaCardPhoto");
+  img.src = jamiaPhotoData;
+  img.style.display = "block";
+}
+
+async function jamiaStartCamera() {
+  try {
+    jamiaCameraStream =
+      await navigator.mediaDevices.getUserMedia({
+        video: { facingMode: "user" },
+        audio: false
+      });
+
+    document.getElementById("jamiaVideo").srcObject =
+      jamiaCameraStream;
+
+    document.getElementById("jamiaCameraBox").style.display =
+      "block";
+  } catch (error) {
+    alert("Camera permission do ya gallery se photo upload karo.");
+  }
+}
+
+function jamiaCapturePhoto() {
+  const video = document.getElementById("jamiaVideo");
+  const canvas = document.createElement("canvas");
+
+  canvas.width = video.videoWidth;
+  canvas.height = video.videoHeight;
+
+  canvas.getContext("2d").drawImage(video, 0, 0);
+
+  jamiaPhotoData = canvas.toDataURL("image/jpeg", 0.85);
+  jamiaShowPhoto();
+  jamiaStopCamera();
+}
+
+function jamiaStopCamera() {
+  if (jamiaCameraStream) {
+    jamiaCameraStream.getTracks().forEach(track => track.stop());
+    jamiaCameraStream = null;
+  }
+  document.getElementById("jamiaCameraBox").style.display =
+    "none";
+}</script>
 </body></html>
