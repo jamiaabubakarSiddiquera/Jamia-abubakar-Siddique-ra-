@@ -189,19 +189,40 @@ display:none;margin:auto">
   cursor: pointer;
 }
 
+@page {
+  size: A4;
+  margin: 10mm;
+}
+
 @media print {
-  body * { visibility: hidden; }
-  #jamiaCard, #jamiaCard * { visibility: visible; }
+  body * {
+    visibility: hidden !important;
+  }
+
+  #jamiaCard,
+  #jamiaCard * {
+    visibility: visible !important;
+  }
+
   #jamiaCard {
+    display: block !important;
     position: absolute;
     left: 0;
     top: 0;
     width: 85mm;
+    max-width: 85mm;
+    box-sizing: border-box;
+    margin: 0;
+    box-shadow: none;
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
   }
-  #jamiaCard button { display: none; }
+
+  #jamiaCard button {
+    display: none !important;
+  }
 }
+ 
  
 </style>
 
