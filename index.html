@@ -74,4 +74,128 @@ function askAI(){
 admissionForm.addEventListener('submit',e=>{e.preventDefault();let d=new FormData(admissionForm),m='Jamia Abubakar Siddique (RA) Admission Enquiry\nStudent: '+d.get('student')+'\nGuardian: '+d.get('guardian')+'\nAge: '+d.get('age')+'\nPhone: '+d.get('phone')+'\nCourse: '+d.get('course');window.open('https://wa.me/919681035071?text='+encodeURIComponent(m),'_blank')});
 function notices(){try{return JSON.parse(localStorage.getItem('jamiaNotices')||'[]')}catch(e){return []}}function adminLogin(){if(adminPin.value==='1234'){adminPanel.classList.remove('hidden');adminStatus.textContent='Demo login opened on this browser.';renderNotices()}else adminStatus.textContent='गलत PIN। Demo PIN: 1234'}function logout(){adminPanel.classList.add('hidden');adminPin.value=''}function saveNotice(){let t=noticeTitle.value.trim(),b=noticeText.value.trim();if(!t||!b){alert('शीर्षक और विवरण भरें।');return}let a=notices();a.unshift({t,b,date:new Date().toLocaleDateString('en-IN')});localStorage.setItem('jamiaNotices',JSON.stringify(a));noticeTitle.value='';noticeText.value='';renderNotices()}function renderNotices(){let a=notices();savedNotices.innerHTML='';publicNotices.innerHTML='';if(!a.length){publicNotices.textContent='अभी कोई नया नोटिस नहीं है।';savedNotices.textContent='अभी कोई नोटिस नहीं।';return}a.forEach((x,i)=>{let el=document.createElement('div');el.className='adminnotice';let h=document.createElement('b');h.textContent=x.t;let p=document.createElement('p');p.textContent=x.b;let s=document.createElement('small');s.textContent=x.date;el.append(h,p,s);let pub=el.cloneNode(true);publicNotices.append(pub);let del=document.createElement('button');del.className='btn';del.textContent='Delete';del.onclick=()=>{let z=notices();z.splice(i,1);localStorage.setItem('jamiaNotices',JSON.stringify(z));renderNotices()};el.append(del);savedNotices.append(el)})}
 try{setLang(localStorage.getItem('jamiaLang')||'hi')}catch(e){setLang('hi')}
-</script></body></html>
+</script>
+<section id="jamia-id-maker">
+  <h2>Jamia Abubakar Siddique (RA)</h2>
+  <p>Student Identity Card</p>
+
+  <label>Student Name</label>
+  <input id="jamiaName" placeholder="Student name">
+
+  <label>Father's Name</label>
+  <input id="jamiaFather" placeholder="Father's name">
+
+  <label>Class</label>
+  <input id="jamiaClass" placeholder="Class">
+
+  <label>Date of Birth</label>
+  <input id="jamiaDob" type="date">
+
+  <label>Address</label>
+  <input id="jamiaAddress" placeholder="Student address">
+
+  <button onclick="jamiaGenerate()">Generate ID Card</button>
+
+  <div id="jamiaCard" style="display:none">
+    <hr>
+    <h2>JAMIA ABUBAKAR SIDDIQUE (RA)</h2>
+    <h3>STUDENT IDENTITY CARD</h3>
+    <p><b>ID No:</b> <span id="jamiaCardId"></span></p>
+    <p><b>Name:</b> <span id="jamiaCardName"></span></p>
+    <p><b>Father:</b> <span id="jamiaCardFather"></span></p>
+    <p><b>Class:</b> <span id="jamiaCardClass"></span></p>
+    <p><b>DOB:</b> <span id="jamiaCardDob"></span></p>
+    <p><b>Address:</b> <span id="jamiaCardAddress"></span></p>
+    <p>Authorized Signature: __________</p>
+    <button onclick="window.print()">Print / Save PDF</button>
+  </div>
+</section>
+
+<style>
+#jamia-id-maker {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #176b50;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+}
+#jamia-id-maker h2 {
+  color: #176b50;
+  text-align: center;
+}
+#jamia-id-maker label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+#jamia-id-maker input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 11px;
+  margin-top: 5px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+#jamia-id-maker button {
+  margin-top: 15px;
+  padding: 11px 16px;
+  background: #176b50;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+}
+#jamiaCard {
+  margin-top: 20px;
+  padding: 18px;
+  border: 3px solid #176b50;
+  border-radius: 12px;
+  background: #fff;
+  color: #222;
+}
+#jamiaCard h3 { text-align: center; }
+@media print {
+  body * { visibility: hidden; }
+  #jamiaCard, #jamiaCard * { visibility: visible; }
+  #jamiaCard {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 85mm;
+  }
+  #jamiaCard button { display: none; }
+}
+</style>
+
+<script>
+function jamiaGenerate() {
+  const name = document.getElementById("jamiaName").value.trim();
+  if (!name) {
+    alert("Student name likho!");
+    return;
+  }
+
+  let next = Number(localStorage.getItem("jamiaNextStudentId") || 1);
+
+  if (next < 1 || next > 1000) {
+    alert("1000 student ID complete ho chuke hain!");
+    return;
+  }
+
+  document.getElementById("jamiaCardId").textContent = next;
+  document.getElementById("jamiaCardName").textContent = name;
+  document.getElementById("jamiaCardFather").textContent =
+    document.getElementById("jamiaFather").value;
+  document.getElementById("jamiaCardClass").textContent =
+    document.getElementById("jamiaClass").value;
+  document.getElementById("jamiaCardDob").textContent =
+    document.getElementById("jamiaDob").value;
+  document.getElementById("jamiaCardAddress").textContent =
+    document.getElementById("jamiaAddress").value;
+
+  document.getElementById("jamiaCard").style.display = "block";
+
+  localStorage.setItem("jamiaNextStudentId", next + 1);
+}
+</script>
+</body></html>
